@@ -20,6 +20,9 @@
 		204DCF272020A6990065B7DF /* IdentifiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF242020A6990065B7DF /* IdentifiableProtocol.swift */; };
 		204DCF2B2020A6CE0065B7DF /* FeedbackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF292020A6CE0065B7DF /* FeedbackSpec.swift */; };
 		204DCF2C2020A6CE0065B7DF /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF2A2020A6CE0065B7DF /* UserSpec.swift */; };
+		204DCF2F2020F88F0065B7DF /* ColleaguesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF2E2020F88F0065B7DF /* ColleaguesUseCase.swift */; };
+		204DCF312020F9280065B7DF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF302020F9280065B7DF /* Result.swift */; };
+		204DCF342020FF670065B7DF /* ResultSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF332020FF670065B7DF /* ResultSpec.swift */; };
 		F9DA871736DA1508A887601C /* Pods_FeedbackAppDomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593BB662181C64F695C362C7 /* Pods_FeedbackAppDomainTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,9 @@
 		204DCF242020A6990065B7DF /* IdentifiableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableProtocol.swift; sourceTree = "<group>"; };
 		204DCF292020A6CE0065B7DF /* FeedbackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackSpec.swift; sourceTree = "<group>"; };
 		204DCF2A2020A6CE0065B7DF /* UserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSpec.swift; sourceTree = "<group>"; };
+		204DCF2E2020F88F0065B7DF /* ColleaguesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesUseCase.swift; sourceTree = "<group>"; };
+		204DCF302020F9280065B7DF /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		204DCF332020FF670065B7DF /* ResultSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSpec.swift; sourceTree = "<group>"; };
 		5867A722381A24F120FD2CC0 /* Pods-FeedbackApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackApp/Pods-FeedbackApp.release.xcconfig"; sourceTree = "<group>"; };
 		593BB662181C64F695C362C7 /* Pods_FeedbackAppDomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedbackAppDomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C47CBFC60BF6CB99A2A6CE7 /* Pods-FeedbackAppDomainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppDomainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppDomainTests/Pods-FeedbackAppDomainTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 		204DCF032020A5FF0065B7DF /* FeedbackAppDomain */ = {
 			isa = PBXGroup;
 			children = (
+				204DCF2D2020F85F0065B7DF /* UseCases */,
 				204DCF232020A6990065B7DF /* Utils */,
 				204DCF202020A6990065B7DF /* Models */,
 				204DCF042020A5FF0065B7DF /* FeedbackAppDomain.h */,
@@ -169,6 +176,7 @@
 		204DCF102020A5FF0065B7DF /* FeedbackAppDomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				204DCF322020FF580065B7DF /* Utils */,
 				204DCF282020A6CE0065B7DF /* Models */,
 				204DCF132020A5FF0065B7DF /* Info.plist */,
 			);
@@ -188,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				204DCF242020A6990065B7DF /* IdentifiableProtocol.swift */,
+				204DCF302020F9280065B7DF /* Result.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -199,6 +208,22 @@
 				204DCF2A2020A6CE0065B7DF /* UserSpec.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		204DCF2D2020F85F0065B7DF /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				204DCF2E2020F88F0065B7DF /* ColleaguesUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		204DCF322020FF580065B7DF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				204DCF332020FF670065B7DF /* ResultSpec.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		78E044F6A4A5DC6E243F4522 /* Pods */ = {
@@ -475,8 +500,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				204DCF272020A6990065B7DF /* IdentifiableProtocol.swift in Sources */,
+				204DCF312020F9280065B7DF /* Result.swift in Sources */,
 				204DCF262020A6990065B7DF /* Feedback.swift in Sources */,
 				204DCF252020A6990065B7DF /* User.swift in Sources */,
+				204DCF2F2020F88F0065B7DF /* ColleaguesUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +513,7 @@
 			files = (
 				204DCF2B2020A6CE0065B7DF /* FeedbackSpec.swift in Sources */,
 				204DCF2C2020A6CE0065B7DF /* UserSpec.swift in Sources */,
+				204DCF342020FF670065B7DF /* ResultSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

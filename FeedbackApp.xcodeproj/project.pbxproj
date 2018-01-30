@@ -11,7 +11,55 @@
 		204DCEEB2020A38C0065B7DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCEEA2020A38C0065B7DF /* AppDelegate.swift */; };
 		204DCEF22020A38C0065B7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204DCEF12020A38C0065B7DF /* Assets.xcassets */; };
 		204DCEF52020A38C0065B7DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 204DCEF32020A38C0065B7DF /* LaunchScreen.storyboard */; };
+		204DCF0B2020A5FF0065B7DF /* FeedbackAppDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204DCF022020A5FF0065B7DF /* FeedbackAppDomain.framework */; };
+		204DCF142020A5FF0065B7DF /* FeedbackAppDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = 204DCF042020A5FF0065B7DF /* FeedbackAppDomain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		204DCF172020A5FF0065B7DF /* FeedbackAppDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204DCF022020A5FF0065B7DF /* FeedbackAppDomain.framework */; };
+		204DCF182020A5FF0065B7DF /* FeedbackAppDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 204DCF022020A5FF0065B7DF /* FeedbackAppDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		204DCF252020A6990065B7DF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF212020A6990065B7DF /* User.swift */; };
+		204DCF262020A6990065B7DF /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF222020A6990065B7DF /* Feedback.swift */; };
+		204DCF272020A6990065B7DF /* IdentifiableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF242020A6990065B7DF /* IdentifiableProtocol.swift */; };
+		204DCF2B2020A6CE0065B7DF /* FeedbackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF292020A6CE0065B7DF /* FeedbackSpec.swift */; };
+		204DCF2C2020A6CE0065B7DF /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCF2A2020A6CE0065B7DF /* UserSpec.swift */; };
+		F9DA871736DA1508A887601C /* Pods_FeedbackAppDomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 593BB662181C64F695C362C7 /* Pods_FeedbackAppDomainTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		204DCF0C2020A5FF0065B7DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 204DCEDF2020A38C0065B7DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 204DCF012020A5FF0065B7DF;
+			remoteInfo = FeedbackAppDomain;
+		};
+		204DCF0E2020A5FF0065B7DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 204DCEDF2020A38C0065B7DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 204DCEE62020A38C0065B7DF;
+			remoteInfo = FeedbackApp;
+		};
+		204DCF152020A5FF0065B7DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 204DCEDF2020A38C0065B7DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 204DCF012020A5FF0065B7DF;
+			remoteInfo = FeedbackAppDomain;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		204DCF1E2020A5FF0065B7DF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				204DCF182020A5FF0065B7DF /* FeedbackAppDomain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		204DCEE72020A38C0065B7DF /* FeedbackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedbackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,9 +67,22 @@
 		204DCEF12020A38C0065B7DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		204DCEF42020A38C0065B7DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		204DCEF62020A38C0065B7DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		204DCF022020A5FF0065B7DF /* FeedbackAppDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeedbackAppDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		204DCF042020A5FF0065B7DF /* FeedbackAppDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackAppDomain.h; sourceTree = "<group>"; };
+		204DCF052020A5FF0065B7DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		204DCF0A2020A5FF0065B7DF /* FeedbackAppDomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedbackAppDomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		204DCF132020A5FF0065B7DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		204DCF212020A6990065B7DF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		204DCF222020A6990065B7DF /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		204DCF242020A6990065B7DF /* IdentifiableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableProtocol.swift; sourceTree = "<group>"; };
+		204DCF292020A6CE0065B7DF /* FeedbackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackSpec.swift; sourceTree = "<group>"; };
+		204DCF2A2020A6CE0065B7DF /* UserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSpec.swift; sourceTree = "<group>"; };
 		5867A722381A24F120FD2CC0 /* Pods-FeedbackApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackApp/Pods-FeedbackApp.release.xcconfig"; sourceTree = "<group>"; };
+		593BB662181C64F695C362C7 /* Pods_FeedbackAppDomainTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedbackAppDomainTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C47CBFC60BF6CB99A2A6CE7 /* Pods-FeedbackAppDomainTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppDomainTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppDomainTests/Pods-FeedbackAppDomainTests.release.xcconfig"; sourceTree = "<group>"; };
 		94AACCE9BA5319F8CAA5D521 /* Pods_FeedbackApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedbackApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A082929C9D6E7591323273BD /* Pods-FeedbackApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackApp/Pods-FeedbackApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F934746069D806F2CB6DC079 /* Pods-FeedbackAppDomainTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppDomainTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppDomainTests/Pods-FeedbackAppDomainTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +91,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				05575A79CC17F4A43C908B38 /* Pods_FeedbackApp.framework in Frameworks */,
+				204DCF172020A5FF0065B7DF /* FeedbackAppDomain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		204DCEFE2020A5FF0065B7DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		204DCF072020A5FF0065B7DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				204DCF0B2020A5FF0065B7DF /* FeedbackAppDomain.framework in Frameworks */,
+				F9DA871736DA1508A887601C /* Pods_FeedbackAppDomainTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				204DCEE92020A38C0065B7DF /* FeedbackApp */,
+				204DCF032020A5FF0065B7DF /* FeedbackAppDomain */,
+				204DCF102020A5FF0065B7DF /* FeedbackAppDomainTests */,
 				204DCEE82020A38C0065B7DF /* Products */,
 				78E044F6A4A5DC6E243F4522 /* Pods */,
 				CCE685CF6C03914433C79B63 /* Frameworks */,
@@ -50,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				204DCEE72020A38C0065B7DF /* FeedbackApp.app */,
+				204DCF022020A5FF0065B7DF /* FeedbackAppDomain.framework */,
+				204DCF0A2020A5FF0065B7DF /* FeedbackAppDomainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,11 +155,59 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		204DCF032020A5FF0065B7DF /* FeedbackAppDomain */ = {
+			isa = PBXGroup;
+			children = (
+				204DCF232020A6990065B7DF /* Utils */,
+				204DCF202020A6990065B7DF /* Models */,
+				204DCF042020A5FF0065B7DF /* FeedbackAppDomain.h */,
+				204DCF052020A5FF0065B7DF /* Info.plist */,
+			);
+			path = FeedbackAppDomain;
+			sourceTree = "<group>";
+		};
+		204DCF102020A5FF0065B7DF /* FeedbackAppDomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				204DCF282020A6CE0065B7DF /* Models */,
+				204DCF132020A5FF0065B7DF /* Info.plist */,
+			);
+			path = FeedbackAppDomainTests;
+			sourceTree = "<group>";
+		};
+		204DCF202020A6990065B7DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				204DCF212020A6990065B7DF /* User.swift */,
+				204DCF222020A6990065B7DF /* Feedback.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		204DCF232020A6990065B7DF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				204DCF242020A6990065B7DF /* IdentifiableProtocol.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		204DCF282020A6CE0065B7DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				204DCF292020A6CE0065B7DF /* FeedbackSpec.swift */,
+				204DCF2A2020A6CE0065B7DF /* UserSpec.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		78E044F6A4A5DC6E243F4522 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				A082929C9D6E7591323273BD /* Pods-FeedbackApp.debug.xcconfig */,
 				5867A722381A24F120FD2CC0 /* Pods-FeedbackApp.release.xcconfig */,
+				F934746069D806F2CB6DC079 /* Pods-FeedbackAppDomainTests.debug.xcconfig */,
+				8C47CBFC60BF6CB99A2A6CE7 /* Pods-FeedbackAppDomainTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -86,11 +216,23 @@
 			isa = PBXGroup;
 			children = (
 				94AACCE9BA5319F8CAA5D521 /* Pods_FeedbackApp.framework */,
+				593BB662181C64F695C362C7 /* Pods_FeedbackAppDomainTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		204DCEFF2020A5FF0065B7DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				204DCF142020A5FF0065B7DF /* FeedbackAppDomain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		204DCEE62020A38C0065B7DF /* FeedbackApp */ = {
@@ -103,15 +245,57 @@
 				204DCEE52020A38C0065B7DF /* Resources */,
 				4F0D27BB7DAD2ED7720E0385 /* [CP] Embed Pods Frameworks */,
 				9CEB339CEA3634A539FDF949 /* [CP] Copy Pods Resources */,
+				204DCF1E2020A5FF0065B7DF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				204DCF162020A5FF0065B7DF /* PBXTargetDependency */,
 			);
 			name = FeedbackApp;
 			productName = FeedbackApp;
 			productReference = 204DCEE72020A38C0065B7DF /* FeedbackApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		204DCF012020A5FF0065B7DF /* FeedbackAppDomain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 204DCF1D2020A5FF0065B7DF /* Build configuration list for PBXNativeTarget "FeedbackAppDomain" */;
+			buildPhases = (
+				204DCEFD2020A5FF0065B7DF /* Sources */,
+				204DCEFE2020A5FF0065B7DF /* Frameworks */,
+				204DCEFF2020A5FF0065B7DF /* Headers */,
+				204DCF002020A5FF0065B7DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FeedbackAppDomain;
+			productName = FeedbackAppDomain;
+			productReference = 204DCF022020A5FF0065B7DF /* FeedbackAppDomain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		204DCF092020A5FF0065B7DF /* FeedbackAppDomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 204DCF1F2020A5FF0065B7DF /* Build configuration list for PBXNativeTarget "FeedbackAppDomainTests" */;
+			buildPhases = (
+				AE017742B7F6BDF2204F7D71 /* [CP] Check Pods Manifest.lock */,
+				204DCF062020A5FF0065B7DF /* Sources */,
+				204DCF072020A5FF0065B7DF /* Frameworks */,
+				204DCF082020A5FF0065B7DF /* Resources */,
+				B58B01BFC59F21CB0A0F0CB9 /* [CP] Embed Pods Frameworks */,
+				0D8B9040421B4D412F146047 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				204DCF0D2020A5FF0065B7DF /* PBXTargetDependency */,
+				204DCF0F2020A5FF0065B7DF /* PBXTargetDependency */,
+			);
+			name = FeedbackAppDomainTests;
+			productName = FeedbackAppDomainTests;
+			productReference = 204DCF0A2020A5FF0065B7DF /* FeedbackAppDomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -126,6 +310,15 @@
 					204DCEE62020A38C0065B7DF = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+					};
+					204DCF012020A5FF0065B7DF = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					204DCF092020A5FF0065B7DF = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 204DCEE62020A38C0065B7DF;
 					};
 				};
 			};
@@ -143,6 +336,8 @@
 			projectRoot = "";
 			targets = (
 				204DCEE62020A38C0065B7DF /* FeedbackApp */,
+				204DCF012020A5FF0065B7DF /* FeedbackAppDomain */,
+				204DCF092020A5FF0065B7DF /* FeedbackAppDomainTests */,
 			);
 		};
 /* End PBXProject section */
@@ -157,9 +352,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		204DCF002020A5FF0065B7DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		204DCF082020A5FF0065B7DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D8B9040421B4D412F146047 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedbackAppDomainTests/Pods-FeedbackAppDomainTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4F0D27BB7DAD2ED7720E0385 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +429,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedbackApp/Pods-FeedbackApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AE017742B7F6BDF2204F7D71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B58B01BFC59F21CB0A0F0CB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FeedbackAppDomainTests/Pods-FeedbackAppDomainTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -216,7 +470,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		204DCEFD2020A5FF0065B7DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				204DCF272020A6990065B7DF /* IdentifiableProtocol.swift in Sources */,
+				204DCF262020A6990065B7DF /* Feedback.swift in Sources */,
+				204DCF252020A6990065B7DF /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		204DCF062020A5FF0065B7DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				204DCF2B2020A6CE0065B7DF /* FeedbackSpec.swift in Sources */,
+				204DCF2C2020A6CE0065B7DF /* UserSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		204DCF0D2020A5FF0065B7DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 204DCF012020A5FF0065B7DF /* FeedbackAppDomain */;
+			targetProxy = 204DCF0C2020A5FF0065B7DF /* PBXContainerItemProxy */;
+		};
+		204DCF0F2020A5FF0065B7DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 204DCEE62020A38C0065B7DF /* FeedbackApp */;
+			targetProxy = 204DCF0E2020A5FF0065B7DF /* PBXContainerItemProxy */;
+		};
+		204DCF162020A5FF0065B7DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 204DCF012020A5FF0065B7DF /* FeedbackAppDomain */;
+			targetProxy = 204DCF152020A5FF0065B7DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		204DCEF32020A38C0065B7DF /* LaunchScreen.storyboard */ = {
@@ -341,6 +632,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A082929C9D6E7591323273BD /* Pods-FeedbackApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FeedbackApp/Info.plist;
@@ -357,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5867A722381A24F120FD2CC0 /* Pods-FeedbackApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FeedbackApp/Info.plist;
@@ -366,6 +659,86 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		204DCF192020A5FF0065B7DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FeedbackAppDomain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.challenges.FeedbackAppDomain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		204DCF1A2020A5FF0065B7DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FeedbackAppDomain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.challenges.FeedbackAppDomain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		204DCF1B2020A5FF0065B7DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F934746069D806F2CB6DC079 /* Pods-FeedbackAppDomainTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedbackAppDomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.challenges.FeedbackAppDomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedbackApp.app/FeedbackApp";
+			};
+			name = Debug;
+		};
+		204DCF1C2020A5FF0065B7DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C47CBFC60BF6CB99A2A6CE7 /* Pods-FeedbackAppDomainTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedbackAppDomainTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.challenges.FeedbackAppDomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedbackApp.app/FeedbackApp";
 			};
 			name = Release;
 		};
@@ -386,6 +759,24 @@
 			buildConfigurations = (
 				204DCEFA2020A38C0065B7DF /* Debug */,
 				204DCEFB2020A38C0065B7DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		204DCF1D2020A5FF0065B7DF /* Build configuration list for PBXNativeTarget "FeedbackAppDomain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				204DCF192020A5FF0065B7DF /* Debug */,
+				204DCF1A2020A5FF0065B7DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		204DCF1F2020A5FF0065B7DF /* Build configuration list for PBXNativeTarget "FeedbackAppDomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				204DCF1B2020A5FF0065B7DF /* Debug */,
+				204DCF1C2020A5FF0065B7DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

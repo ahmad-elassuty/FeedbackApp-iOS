@@ -9,3 +9,9 @@ end
 target 'FeedbackApp' do
   use_frameworks!
 end
+
+target 'FeedbackAppDomainTests' do
+  use_frameworks!
+
+  include_testing_pods
+end

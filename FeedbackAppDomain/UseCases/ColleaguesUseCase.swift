@@ -10,10 +10,10 @@
  ColleaguesUseCase defines all application
     capabilities/use cases regarding colleagues
  */
-protocol ColleaguesUseCase {
-    associatedtype FetchColleaguesError         : Error
-    associatedtype GiveColleagueFeedbackError   : Error
-    associatedtype FetchColleagueProfileError   : Error
+public protocol ColleaguesUseCase {
+    associatedtype FetchColleaguesErrorType         : Error
+    associatedtype GiveColleagueFeedbackErrorType   : Error
+    associatedtype FetchColleagueProfileErrorType   : Error
 
     /**
      Fetch all colleagues
@@ -25,7 +25,7 @@ protocol ColleaguesUseCase {
         Swift.Void
     */
     func fetchColleagues(
-        completion: (Result<[User], FetchColleaguesError>) -> Void
+        completion: (Result<[User], FetchColleaguesErrorType>) -> Void
     )
 
 
@@ -43,7 +43,7 @@ protocol ColleaguesUseCase {
     func giveColleagueFeedback(
         id: User.IdentifierType,
         feedback: Feedback,
-        completion: (Result<User, GiveColleagueFeedbackError>) -> Void
+        completion: (Result<User, GiveColleagueFeedbackErrorType>) -> Void
     )
 
 
@@ -60,6 +60,6 @@ protocol ColleaguesUseCase {
      */
     func fetchColleagueProfile(
         id: User.IdentifierType,
-        completion: (Result<User, GiveColleagueFeedbackError>) -> Void
+        completion: (Result<User, FetchColleagueProfileErrorType>) -> Void
     )
 }

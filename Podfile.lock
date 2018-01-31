@@ -1,15 +1,18 @@
 PODS:
+  - Marshal (1.2.4)
   - Nimble (7.0.3)
   - Quick (1.2.0)
 
 DEPENDENCIES:
+  - Marshal (~> 1.2)
   - Nimble
   - Quick
 
 SPEC CHECKSUMS:
+  Marshal: 8e04e6624e506921db7143b0bfd83caee03f32d6
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 583b12e897213b14081d849e7ab459625b54e25f
+PODFILE CHECKSUM: ac15be72b6f2bdfb37df2e1df214e07a0958e25e
 
 COCOAPODS: 1.2.1

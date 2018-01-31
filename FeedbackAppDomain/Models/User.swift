@@ -13,11 +13,11 @@ public struct User: Identifiable, Equatable {
     public let id                  : Int
     public let name                : String
     public let email               : String
-    public let avatarURLString     : String
+    public let avatarURLString     : String?
     public let feedbacks           : [Feedback]
 
     public init(id: Int, name: String, email: String,
-                avatarURLString: String, feedbacks: [Feedback]) {
+                avatarURLString: String?, feedbacks: [Feedback]) {
         self.id                 = id
         self.name               = name
         self.email              = email

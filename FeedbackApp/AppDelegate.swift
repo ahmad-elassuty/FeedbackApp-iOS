@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FeedbackAppDomain
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

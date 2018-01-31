@@ -9,11 +9,13 @@
 import FeedbackAppDomain
 import FeedbackAppFileStore
 
+protocol FetchColleaguesRequest {}
+
 final class FetchColleaguesWorker {
     let fileStore: FeedbackAppFileStore.ColleaguesUseCase = ColleaguesUseCase()
 
     typealias ResultType = Result<[User], ColleaguesUseCaseError>
-    func fetchColleagues(completion: (ResultType) -> Void) {
+    func fetchColleagues(request: FetchColleaguesRequest, completion: (ResultType) -> Void) {
         fileStore.fetchColleagues { storeResult in
             guard storeResult.isSuccess else {
                 let error = ColleaguesUseCaseError(fileStoreError: storeResult.error!)

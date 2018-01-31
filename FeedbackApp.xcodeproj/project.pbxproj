@@ -43,6 +43,25 @@
 		20C861822021D6E600AD6391 /* GiveColleagueFeedbackWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861812021D6E600AD6391 /* GiveColleagueFeedbackWorker.swift */; };
 		20C861842021D6F200AD6391 /* FetchColleagueProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861832021D6F200AD6391 /* FetchColleagueProfileWorker.swift */; };
 		20C861882021D86A00AD6391 /* ColleaguesUseCaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861872021D86A00AD6391 /* ColleaguesUseCaseErrors.swift */; };
+		20C861952021FB5F00AD6391 /* ColleaguesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861942021FB5F00AD6391 /* ColleaguesListInteractor.swift */; };
+		20C861972021FB6C00AD6391 /* ColleaguesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861962021FB6C00AD6391 /* ColleaguesListPresenter.swift */; };
+		20C861992021FB8100AD6391 /* ColleaguesListSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861982021FB8100AD6391 /* ColleaguesListSceneConfigurator.swift */; };
+		20C8619B2021FB9100AD6391 /* ColleaguesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8619A2021FB9100AD6391 /* ColleaguesListRouter.swift */; };
+		20C8619D2021FBBE00AD6391 /* ColleaguesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8619C2021FBBE00AD6391 /* ColleaguesListModel.swift */; };
+		20C8619F2021FC1A00AD6391 /* ColleaguesListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8619E2021FC1A00AD6391 /* ColleaguesListProtocols.swift */; };
+		20C861A32021FCD800AD6391 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861A22021FCD800AD6391 /* BaseViewController.swift */; };
+		20C861A82022003D00AD6391 /* ColleaguesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861A62022003D00AD6391 /* ColleaguesListViewController.swift */; };
+		20C861A92022003D00AD6391 /* ColleaguesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C861A72022003D00AD6391 /* ColleaguesListViewController.xib */; };
+		20C861AC2022007A00AD6391 /* ColleaguesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861AA2022007A00AD6391 /* ColleaguesListTableViewCell.swift */; };
+		20C861AD2022007A00AD6391 /* ColleaguesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C861AB2022007A00AD6391 /* ColleaguesListTableViewCell.xib */; };
+		20C861B0202200A800AD6391 /* ColleagueProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861AF202200A800AD6391 /* ColleagueProfileInteractor.swift */; };
+		20C861B2202200B100AD6391 /* ColleagueProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861B1202200B100AD6391 /* ColleagueProfilePresenter.swift */; };
+		20C861B4202200BC00AD6391 /* ColleagueProfileSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861B3202200BC00AD6391 /* ColleagueProfileSceneConfigurator.swift */; };
+		20C861B6202200C900AD6391 /* ColleagueProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861B5202200C900AD6391 /* ColleagueProfileRouter.swift */; };
+		20C861B8202200D200AD6391 /* ColleagueProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861B7202200D200AD6391 /* ColleagueProfileModel.swift */; };
+		20C861BA202200DC00AD6391 /* ColleagueProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861B9202200DC00AD6391 /* ColleagueProfileProtocols.swift */; };
+		20C861BD202200EE00AD6391 /* ColleagueProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861BB202200EE00AD6391 /* ColleagueProfileViewController.swift */; };
+		20C861BE202200EE00AD6391 /* ColleagueProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C861BC202200EE00AD6391 /* ColleagueProfileViewController.xib */; };
 		2CFE9902440559DDA328B441 /* Pods_FeedbackAppFileStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC89569D34D705D9A6358584 /* Pods_FeedbackAppFileStore.framework */; };
 		7B47FB8B71051778232F4A67 /* Pods_FeedbackAppDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91498CEF9E23DE4E0B3EA34 /* Pods_FeedbackAppDomain.framework */; };
 		8DA33C5FEF1DE353FDCF474B /* Pods_FeedbackAppFileStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF80054D7B06872F8122B28 /* Pods_FeedbackAppFileStoreTests.framework */; };
@@ -162,6 +181,25 @@
 		20C861812021D6E600AD6391 /* GiveColleagueFeedbackWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveColleagueFeedbackWorker.swift; sourceTree = "<group>"; };
 		20C861832021D6F200AD6391 /* FetchColleagueProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchColleagueProfileWorker.swift; sourceTree = "<group>"; };
 		20C861872021D86A00AD6391 /* ColleaguesUseCaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesUseCaseErrors.swift; sourceTree = "<group>"; };
+		20C861942021FB5F00AD6391 /* ColleaguesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListInteractor.swift; sourceTree = "<group>"; };
+		20C861962021FB6C00AD6391 /* ColleaguesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListPresenter.swift; sourceTree = "<group>"; };
+		20C861982021FB8100AD6391 /* ColleaguesListSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListSceneConfigurator.swift; sourceTree = "<group>"; };
+		20C8619A2021FB9100AD6391 /* ColleaguesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListRouter.swift; sourceTree = "<group>"; };
+		20C8619C2021FBBE00AD6391 /* ColleaguesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListModel.swift; sourceTree = "<group>"; };
+		20C8619E2021FC1A00AD6391 /* ColleaguesListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListProtocols.swift; sourceTree = "<group>"; };
+		20C861A22021FCD800AD6391 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		20C861A62022003D00AD6391 /* ColleaguesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListViewController.swift; sourceTree = "<group>"; };
+		20C861A72022003D00AD6391 /* ColleaguesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColleaguesListViewController.xib; sourceTree = "<group>"; };
+		20C861AA2022007A00AD6391 /* ColleaguesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListTableViewCell.swift; sourceTree = "<group>"; };
+		20C861AB2022007A00AD6391 /* ColleaguesListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColleaguesListTableViewCell.xib; sourceTree = "<group>"; };
+		20C861AF202200A800AD6391 /* ColleagueProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileInteractor.swift; sourceTree = "<group>"; };
+		20C861B1202200B100AD6391 /* ColleagueProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfilePresenter.swift; sourceTree = "<group>"; };
+		20C861B3202200BC00AD6391 /* ColleagueProfileSceneConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileSceneConfigurator.swift; sourceTree = "<group>"; };
+		20C861B5202200C900AD6391 /* ColleagueProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileRouter.swift; sourceTree = "<group>"; };
+		20C861B7202200D200AD6391 /* ColleagueProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileModel.swift; sourceTree = "<group>"; };
+		20C861B9202200DC00AD6391 /* ColleagueProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileProtocols.swift; sourceTree = "<group>"; };
+		20C861BB202200EE00AD6391 /* ColleagueProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileViewController.swift; sourceTree = "<group>"; };
+		20C861BC202200EE00AD6391 /* ColleagueProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColleagueProfileViewController.xib; sourceTree = "<group>"; };
 		39F22454CBC9F1A0D8122ADE /* Pods-FeedbackAppFileStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppFileStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppFileStoreTests/Pods-FeedbackAppFileStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B5FDD85603843BFA08A6204 /* Pods-FeedbackAppDomain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppDomain.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppDomain/Pods-FeedbackAppDomain.release.xcconfig"; sourceTree = "<group>"; };
 		5867A722381A24F120FD2CC0 /* Pods-FeedbackApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackApp/Pods-FeedbackApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -281,6 +319,7 @@
 		204DCEE92020A38C0065B7DF /* FeedbackApp */ = {
 			isa = PBXGroup;
 			children = (
+				20C861A02021FCC000AD6391 /* Core */,
 				20C8618F2021F72400AD6391 /* Shared */,
 				204DCEFC2020A3A00065B7DF /* Resources */,
 				20C861852021D85800AD6391 /* Errors */,
@@ -447,6 +486,13 @@
 		20C8617D2021D63000AD6391 /* Colleagues List */ = {
 			isa = PBXGroup;
 			children = (
+				20C861932021FB4900AD6391 /* Views */,
+				20C861942021FB5F00AD6391 /* ColleaguesListInteractor.swift */,
+				20C861962021FB6C00AD6391 /* ColleaguesListPresenter.swift */,
+				20C861982021FB8100AD6391 /* ColleaguesListSceneConfigurator.swift */,
+				20C8619A2021FB9100AD6391 /* ColleaguesListRouter.swift */,
+				20C8619C2021FBBE00AD6391 /* ColleaguesListModel.swift */,
+				20C8619E2021FC1A00AD6391 /* ColleaguesListProtocols.swift */,
 			);
 			path = "Colleagues List";
 			sourceTree = "<group>";
@@ -454,6 +500,13 @@
 		20C8617E2021D63500AD6391 /* Colleague Profile */ = {
 			isa = PBXGroup;
 			children = (
+				20C861AE2022008B00AD6391 /* Views */,
+				20C861AF202200A800AD6391 /* ColleagueProfileInteractor.swift */,
+				20C861B1202200B100AD6391 /* ColleagueProfilePresenter.swift */,
+				20C861B3202200BC00AD6391 /* ColleagueProfileSceneConfigurator.swift */,
+				20C861B5202200C900AD6391 /* ColleagueProfileRouter.swift */,
+				20C861B7202200D200AD6391 /* ColleagueProfileModel.swift */,
+				20C861B9202200DC00AD6391 /* ColleagueProfileProtocols.swift */,
 			);
 			path = "Colleague Profile";
 			sourceTree = "<group>";
@@ -495,6 +548,58 @@
 			children = (
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		20C861932021FB4900AD6391 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20C861A52022002B00AD6391 /* Cells */,
+				20C861A42022002500AD6391 /* Controller */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		20C861A02021FCC000AD6391 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				20C861A12021FCCD00AD6391 /* Views */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		20C861A12021FCCD00AD6391 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20C861A22021FCD800AD6391 /* BaseViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		20C861A42022002500AD6391 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20C861A62022003D00AD6391 /* ColleaguesListViewController.swift */,
+				20C861A72022003D00AD6391 /* ColleaguesListViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		20C861A52022002B00AD6391 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				20C861AA2022007A00AD6391 /* ColleaguesListTableViewCell.swift */,
+				20C861AB2022007A00AD6391 /* ColleaguesListTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		20C861AE2022008B00AD6391 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20C861BB202200EE00AD6391 /* ColleagueProfileViewController.swift */,
+				20C861BC202200EE00AD6391 /* ColleagueProfileViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		78E044F6A4A5DC6E243F4522 /* Pods */ = {
@@ -720,8 +825,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C861BE202200EE00AD6391 /* ColleagueProfileViewController.xib in Resources */,
+				20C861A92022003D00AD6391 /* ColleaguesListViewController.xib in Resources */,
 				204DCEF52020A38C0065B7DF /* LaunchScreen.storyboard in Resources */,
 				204DCEF22020A38C0065B7DF /* Assets.xcassets in Resources */,
+				20C861AD2022007A00AD6391 /* ColleaguesListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,9 +1068,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C861802021D6D800AD6391 /* FetchColleaguesWorker.swift in Sources */,
+				20C861BA202200DC00AD6391 /* ColleagueProfileProtocols.swift in Sources */,
+				20C8619F2021FC1A00AD6391 /* ColleaguesListProtocols.swift in Sources */,
+				20C8619D2021FBBE00AD6391 /* ColleaguesListModel.swift in Sources */,
+				20C861B4202200BC00AD6391 /* ColleagueProfileSceneConfigurator.swift in Sources */,
+				20C861B0202200A800AD6391 /* ColleagueProfileInteractor.swift in Sources */,
+				20C861B2202200B100AD6391 /* ColleagueProfilePresenter.swift in Sources */,
+				20C861AC2022007A00AD6391 /* ColleaguesListTableViewCell.swift in Sources */,
+				20C861BD202200EE00AD6391 /* ColleagueProfileViewController.swift in Sources */,
+				20C861A82022003D00AD6391 /* ColleaguesListViewController.swift in Sources */,
+				20C861992021FB8100AD6391 /* ColleaguesListSceneConfigurator.swift in Sources */,
 				204DCEEB2020A38C0065B7DF /* AppDelegate.swift in Sources */,
+				20C861B6202200C900AD6391 /* ColleagueProfileRouter.swift in Sources */,
+				20C861A32021FCD800AD6391 /* BaseViewController.swift in Sources */,
+				20C8619B2021FB9100AD6391 /* ColleaguesListRouter.swift in Sources */,
 				20C861882021D86A00AD6391 /* ColleaguesUseCaseErrors.swift in Sources */,
 				20C861842021D6F200AD6391 /* FetchColleagueProfileWorker.swift in Sources */,
+				20C861B8202200D200AD6391 /* ColleagueProfileModel.swift in Sources */,
+				20C861972021FB6C00AD6391 /* ColleaguesListPresenter.swift in Sources */,
+				20C861952021FB5F00AD6391 /* ColleaguesListInteractor.swift in Sources */,
 				20C861822021D6E600AD6391 /* GiveColleagueFeedbackWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

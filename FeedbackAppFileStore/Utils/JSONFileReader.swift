@@ -6,7 +6,7 @@
 //  Copyright © 2018 Challenges. All rights reserved.
 //
 
-enum FileError: Error {
+enum JSONFileReaderError: Error {
     case notFound
     case cannotBeParsedToJSON
 }
@@ -19,7 +19,7 @@ class JSONFileReader {
         let filePath = bundle.path(forResource: "\(resource).json", ofType: nil)
 
         guard let path = filePath else {
-            throw FileError.notFound
+            throw JSONFileReaderError.notFound
         }
 
         let url         = URL(fileURLWithPath: path)
@@ -29,7 +29,7 @@ class JSONFileReader {
         )
 
         guard let JSON = jsonResult as? [String: Any] else {
-            throw FileError.cannotBeParsedToJSON
+            throw JSONFileReaderError.cannotBeParsedToJSON
         }
 
         return JSON

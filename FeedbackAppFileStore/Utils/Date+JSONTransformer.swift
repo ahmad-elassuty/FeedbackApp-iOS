@@ -17,7 +17,10 @@ extension Date : ValueType {
 
         let optionalDate = ServerDateFormatter.shared.convertStringToDate(string: dateString)
         guard let date = optionalDate else {
-            throw MarshalError.typeMismatch(expected: "ISO8601 date string", actual: dateString)
+            throw MarshalError.typeMismatch(
+                expected: "Date string formated as \(Constants.serverDateFormat)",
+                actual: dateString
+            )
         }
 
         return date

@@ -17,22 +17,7 @@ public class ColleaguesUseCase: FeedbackAppDomain.ColleaguesUseCase {
     }
 
     public func fetchColleagues(completion: (Result<[User], FetchColleaguesError>) -> Void) {
-        let result: Result<[User], FetchColleaguesError>
-
-        do {
-            let JSON = try JSONFileReader.loadResource(dataFileName)
-            let colleagues: [FSUser] = try JSON.value(for: "users")
-            let value = colleagues.map({ $0.asDomainUser() })
-
-            result = Result(value: value)
-        } catch is MarshalError {
-            result = Result(error: .cannotParseData)
-        } catch FileError.cannotBeParsedToJSON {
-            result = Result(error: .cannotParseData)
-        } catch {
-            result = Result(error: .cannotLoadData)
-        }
-
+        let result = prepareFetchColleaguesResult()
         completion(result)
     }
 
@@ -48,5 +33,23 @@ public class ColleaguesUseCase: FeedbackAppDomain.ColleaguesUseCase {
         completion: (Result<User, FetchColleagueProfileError>) -> Void) {
         let result: Result<User, FetchColleagueProfileError> = Result(error: .cannotPerformQueries)
         completion(result)
+    }
+}
+
+private extension ColleaguesUseCase {
+    func prepareFetchColleaguesResult() -> Result<[User], FetchColleaguesError> {
+        do {
+            let JSON = try JSONFileReader.loadResource(dataFileName)
+            let colleagues: [FSUser] = try JSON.value(for: "users")
+            let value = colleagues.map({ $0.asDomainUser() })
+
+            return Result(value: value)
+        } catch is MarshalError {
+            return Result(error: .cannotParseData)
+        } catch JSONFileReaderError.cannotBeParsedToJSON {
+            return Result(error: .cannotParseData)
+        } catch {
+            return Result(error: .cannotLoadData)
+        }
     }
 }

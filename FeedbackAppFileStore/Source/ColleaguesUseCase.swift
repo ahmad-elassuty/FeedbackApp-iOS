@@ -21,8 +21,7 @@ public class ColleaguesUseCase: FeedbackAppDomain.ColleaguesUseCase {
         completion(result)
     }
 
-    public func giveColleagueFeedback(
-        id: Int, feedback: Feedback,
+    public func giveColleagueFeedback(id: Int,
         completion: (Result<User, GiveColleagueFeedbackError>) -> Void) {
         let result: Result<User, GiveColleagueFeedbackError> = Result(error: .cannotPersistData)
         completion(result)

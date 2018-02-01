@@ -12,4 +12,5 @@ enum Constants {
     static let serverTimeZone   = "UTC"
     static let serverDateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
     static let dataFileName     = "colleagues_data"
+    static let serverLocale     = "en_GB"
 }

@@ -8,6 +8,8 @@ end
 
 target 'FeedbackApp' do
   use_frameworks!
+
+  pod 'Kingfisher', '~> 4.6'
 end
 
 target 'FeedbackAppDomain' do

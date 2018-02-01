@@ -62,6 +62,12 @@
 		20C861BA202200DC00AD6391 /* ColleagueProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861B9202200DC00AD6391 /* ColleagueProfileProtocols.swift */; };
 		20C861BD202200EE00AD6391 /* ColleagueProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861BB202200EE00AD6391 /* ColleagueProfileViewController.swift */; };
 		20C861BE202200EE00AD6391 /* ColleagueProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C861BC202200EE00AD6391 /* ColleagueProfileViewController.xib */; };
+		20C861C3202210D500AD6391 /* SceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861C2202210D500AD6391 /* SceneConfigurator.swift */; };
+		20C861C5202210F100AD6391 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861C4202210F100AD6391 /* App.swift */; };
+		20C861C72022111300AD6391 /* ColleaguesListConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861C62022111300AD6391 /* ColleaguesListConstants.swift */; };
+		20C861C92022115F00AD6391 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861C82022115F00AD6391 /* Date+TimeAgo.swift */; };
+		20C861CB2022120400AD6391 /* UITableView+GenericDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861CA2022120400AD6391 /* UITableView+GenericDequeue.swift */; };
+		20C861CF2022261B00AD6391 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861CE2022261B00AD6391 /* UIView+Rounded.swift */; };
 		2CFE9902440559DDA328B441 /* Pods_FeedbackAppFileStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC89569D34D705D9A6358584 /* Pods_FeedbackAppFileStore.framework */; };
 		7B47FB8B71051778232F4A67 /* Pods_FeedbackAppDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91498CEF9E23DE4E0B3EA34 /* Pods_FeedbackAppDomain.framework */; };
 		8DA33C5FEF1DE353FDCF474B /* Pods_FeedbackAppFileStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF80054D7B06872F8122B28 /* Pods_FeedbackAppFileStoreTests.framework */; };
@@ -200,6 +206,12 @@
 		20C861B9202200DC00AD6391 /* ColleagueProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileProtocols.swift; sourceTree = "<group>"; };
 		20C861BB202200EE00AD6391 /* ColleagueProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileViewController.swift; sourceTree = "<group>"; };
 		20C861BC202200EE00AD6391 /* ColleagueProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColleagueProfileViewController.xib; sourceTree = "<group>"; };
+		20C861C2202210D500AD6391 /* SceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneConfigurator.swift; sourceTree = "<group>"; };
+		20C861C4202210F100AD6391 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		20C861C62022111300AD6391 /* ColleaguesListConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListConstants.swift; sourceTree = "<group>"; };
+		20C861C82022115F00AD6391 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
+		20C861CA2022120400AD6391 /* UITableView+GenericDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+GenericDequeue.swift"; sourceTree = "<group>"; };
+		20C861CE2022261B00AD6391 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
 		39F22454CBC9F1A0D8122ADE /* Pods-FeedbackAppFileStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppFileStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppFileStoreTests/Pods-FeedbackAppFileStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B5FDD85603843BFA08A6204 /* Pods-FeedbackAppDomain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppDomain.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppDomain/Pods-FeedbackAppDomain.release.xcconfig"; sourceTree = "<group>"; };
 		5867A722381A24F120FD2CC0 /* Pods-FeedbackApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackApp/Pods-FeedbackApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -319,7 +331,6 @@
 		204DCEE92020A38C0065B7DF /* FeedbackApp */ = {
 			isa = PBXGroup;
 			children = (
-				20C861A02021FCC000AD6391 /* Core */,
 				20C8618F2021F72400AD6391 /* Shared */,
 				204DCEFC2020A3A00065B7DF /* Resources */,
 				20C861852021D85800AD6391 /* Errors */,
@@ -522,6 +533,7 @@
 		20C8618F2021F72400AD6391 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				20C861A12021FCCD00AD6391 /* Views */,
 				20C861922021F7B700AD6391 /* Protocols */,
 				20C861912021F73400AD6391 /* Extensions */,
 				20C861902021F72E00AD6391 /* Constants */,
@@ -532,6 +544,8 @@
 		20C861902021F72E00AD6391 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				20C861C4202210F100AD6391 /* App.swift */,
+				20C861C62022111300AD6391 /* ColleaguesListConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -539,6 +553,9 @@
 		20C861912021F73400AD6391 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				20C861C82022115F00AD6391 /* Date+TimeAgo.swift */,
+				20C861CA2022120400AD6391 /* UITableView+GenericDequeue.swift */,
+				20C861CE2022261B00AD6391 /* UIView+Rounded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -546,6 +563,7 @@
 		20C861922021F7B700AD6391 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				20C861C2202210D500AD6391 /* SceneConfigurator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -557,14 +575,6 @@
 				20C861A42022002500AD6391 /* Controller */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		20C861A02021FCC000AD6391 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				20C861A12021FCCD00AD6391 /* Views */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		20C861A12021FCCD00AD6391 /* Views */ = {
@@ -1073,9 +1083,14 @@
 				20C8619D2021FBBE00AD6391 /* ColleaguesListModel.swift in Sources */,
 				20C861B4202200BC00AD6391 /* ColleagueProfileSceneConfigurator.swift in Sources */,
 				20C861B0202200A800AD6391 /* ColleagueProfileInteractor.swift in Sources */,
+				20C861C92022115F00AD6391 /* Date+TimeAgo.swift in Sources */,
 				20C861B2202200B100AD6391 /* ColleagueProfilePresenter.swift in Sources */,
+				20C861CF2022261B00AD6391 /* UIView+Rounded.swift in Sources */,
+				20C861C3202210D500AD6391 /* SceneConfigurator.swift in Sources */,
 				20C861AC2022007A00AD6391 /* ColleaguesListTableViewCell.swift in Sources */,
+				20C861CB2022120400AD6391 /* UITableView+GenericDequeue.swift in Sources */,
 				20C861BD202200EE00AD6391 /* ColleagueProfileViewController.swift in Sources */,
+				20C861C5202210F100AD6391 /* App.swift in Sources */,
 				20C861A82022003D00AD6391 /* ColleaguesListViewController.swift in Sources */,
 				20C861992021FB8100AD6391 /* ColleaguesListSceneConfigurator.swift in Sources */,
 				204DCEEB2020A38C0065B7DF /* AppDelegate.swift in Sources */,
@@ -1086,6 +1101,7 @@
 				20C861842021D6F200AD6391 /* FetchColleagueProfileWorker.swift in Sources */,
 				20C861B8202200D200AD6391 /* ColleagueProfileModel.swift in Sources */,
 				20C861972021FB6C00AD6391 /* ColleaguesListPresenter.swift in Sources */,
+				20C861C72022111300AD6391 /* ColleaguesListConstants.swift in Sources */,
 				20C861952021FB5F00AD6391 /* ColleaguesListInteractor.swift in Sources */,
 				20C861822021D6E600AD6391 /* GiveColleagueFeedbackWorker.swift in Sources */,
 			);
@@ -1307,6 +1323,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CTDLNV2NUV;
 				INFOPLIST_FILE = FeedbackApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1324,6 +1341,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CTDLNV2NUV;
 				INFOPLIST_FILE = FeedbackApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

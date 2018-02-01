@@ -1,18 +1,21 @@
 PODS:
+  - Kingfisher (4.6.1)
   - Marshal (1.2.4)
   - Nimble (7.0.3)
   - Quick (1.2.0)
 
 DEPENDENCIES:
+  - Kingfisher (~> 4.6)
   - Marshal (~> 1.2)
   - Nimble
   - Quick
 
 SPEC CHECKSUMS:
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
   Marshal: 8e04e6624e506921db7143b0bfd83caee03f32d6
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: ac15be72b6f2bdfb37df2e1df214e07a0958e25e
+PODFILE CHECKSUM: b36a1f747da88883a401cb8c2ddd2201e65fc287
 
 COCOAPODS: 1.2.1

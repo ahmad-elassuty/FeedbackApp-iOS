@@ -9,17 +9,18 @@
 import FeedbackAppDomain
 import FeedbackAppFileStore
 
-protocol FetchColleagueProfileRequest {
-    var userId: User.IdentifierType { get }
+struct FetchColleagueProfileRequest {
+    let userId: User.IdentifierType
 }
 
 final class FetchColleagueProfileWorker {
-    let fileStore: FeedbackAppFileStore.ColleaguesUseCase = ColleaguesUseCase()
+    private let fileStore: FeedbackAppFileStore.ColleaguesUseCase = ColleaguesUseCase()
 
     typealias ResultType = Result<User, ColleaguesUseCaseError>
     func fetchColleagueProfile(request: FetchColleagueProfileRequest,
         completion: (ResultType) -> Void) {
-        fileStore.fetchColleagueProfile(id: request.userId) { storeResult in
+        fileStore.fetchColleagueProfile(id: request.userId)
+        { storeResult in
             guard storeResult.isSuccess else {
                 let error = ColleaguesUseCaseError(fileStoreError: storeResult.error!)
                 let result = ResultType(error: error)

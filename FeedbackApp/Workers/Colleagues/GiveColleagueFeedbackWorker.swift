@@ -9,18 +9,18 @@
 import FeedbackAppDomain
 import FeedbackAppFileStore
 
-protocol GiveColleagueFeedbackRequest {
-    var userId: User.IdentifierType { get }
-    var feedback: Feedback          { get }
+struct GiveColleagueFeedbackRequest {
+    let userId      : User.IdentifierType
 }
 
 final class GiveColleagueFeedbackWorker {
-    let fileStore: FeedbackAppFileStore.ColleaguesUseCase = ColleaguesUseCase()
+    private let fileStore: FeedbackAppFileStore.ColleaguesUseCase = ColleaguesUseCase()
 
     typealias ResultType = Result<User, ColleaguesUseCaseError>
-    func giveColleagueFeedback(request: GiveColleagueFeedbackRequest, feedback: Feedback,
+    func giveColleagueFeedback(request: GiveColleagueFeedbackRequest,
         completion: (ResultType) -> Void) {
-        fileStore.giveColleagueFeedback(id: request.userId, feedback: feedback) { storeResult in
+        fileStore.giveColleagueFeedback(id: request.userId)
+        { storeResult in
             guard storeResult.isSuccess else {
                 let error = ColleaguesUseCaseError(fileStoreError: storeResult.error!)
                 let result = ResultType(error: error)

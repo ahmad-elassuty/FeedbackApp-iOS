@@ -34,7 +34,6 @@ public protocol ColleaguesUseCase {
 
     - parameters:
         - id: Colleague identifier
-        - feedback: New feedback data object
         - completion: Callback to provide the updated colleague data
 
      - returns:
@@ -42,7 +41,6 @@ public protocol ColleaguesUseCase {
      */
     func giveColleagueFeedback(
         id: User.IdentifierType,
-        feedback: Feedback,
         completion: (Result<User, GiveColleagueFeedbackErrorType>) -> Void
     )
 

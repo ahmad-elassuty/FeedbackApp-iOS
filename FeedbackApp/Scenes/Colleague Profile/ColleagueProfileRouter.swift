@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+final class ColleagueProfileRouter: ColleagueProfileRoutingLogic {
+    weak var viewController: (BaseViewController & ColleagueProfileDisplayView)?
+    weak var dataStore: ColleagueProfileDataStore?
+
+    init(viewController: (BaseViewController & ColleagueProfileDisplayView),
+         dataStore: ColleagueProfileDataStore?) {
+        self.viewController = viewController
+        self.dataStore      = dataStore
+    }
+}

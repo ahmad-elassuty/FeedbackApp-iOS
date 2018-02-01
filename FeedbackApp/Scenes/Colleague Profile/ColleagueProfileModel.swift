@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+enum ColleagueProfile {}
+
+extension ColleagueProfile {
+    enum Fetch {
+        struct ViewModel {
+            let name            : String
+            let avatarURL       : URL?
+            let feedbackDates   : [String]
+        }
+    }
+}

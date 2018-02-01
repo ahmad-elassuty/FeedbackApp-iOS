@@ -12,7 +12,8 @@ final class ColleaguesListRouter: ColleaguesListRoutingLogic {
     weak var viewController: (ColleaguesListDisplayView & BaseViewController)?
     weak var dataStore  : ColleaguesListDataStore?
 
-    init(viewController: (BaseViewController & ColleaguesListDisplayView), dataStore: ColleaguesListDataStore?) {
+    init(viewController: BaseViewController & ColleaguesListDisplayView,
+         dataStore: ColleaguesListDataStore?) {
         self.viewController     = viewController
         self.dataStore          = dataStore
     }
@@ -23,8 +24,8 @@ final class ColleaguesListRouter: ColleaguesListRoutingLogic {
             return
         }
 
-         let controller = ColleagueProfileViewController()
-//        controller.router.dataStore?.user = user
+        let controller = ColleagueProfileSceneConfigurator.configure()
+        controller.router.dataStore?.user = user
 
         guard let navigationController = viewController?.navigationController else {
             viewController?.present(controller, animated: true, completion: nil)

@@ -6,4 +6,10 @@
 //  Copyright © 2018 Challenges. All rights reserved.
 //
 
-import Foundation
+final class ColleagueProfilePresenter: ColleagueProfilePresentationLogic {
+    weak var displayView: ColleagueProfileDisplayView?
+
+    init(displayView: ColleagueProfileDisplayView) {
+        self.displayView = displayView
+    }
+}

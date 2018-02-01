@@ -6,4 +6,19 @@
 //  Copyright © 2018 Challenges. All rights reserved.
 //
 
-import Foundation
+import FeedbackAppDomain
+
+final class ColleagueProfileInteractor: ColleagueProfileDataStore {
+    var user        : User?
+    var presenter   : ColleagueProfilePresentationLogic
+
+    init(presenter: ColleagueProfilePresentationLogic) {
+        self.presenter = presenter
+    }
+}
+
+extension ColleagueProfileInteractor: ColleagueProfileBusinessLogic {
+    func fetchColleagueProfile(_ request: FetchColleagueProfileRequest) {
+
+    }
+}

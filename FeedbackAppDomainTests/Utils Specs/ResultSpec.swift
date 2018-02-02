@@ -17,7 +17,6 @@ class ResultSpec: QuickSpec {
         describe("Result Object") {
             var successfulResult: Result<Int, String>!
             var failedResult    : Result<Int, String>!
-
             let value       = 1
             let errorMsg    = "error"
             

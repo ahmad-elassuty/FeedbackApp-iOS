@@ -29,7 +29,19 @@ public struct User: Identifiable, Equatable {
         return feedbacks.first
     }
 
+    /**
+     Prepends the given feedback to user feedbacks array
+
+     - parameters:
+        feedback: feedback object, It should be newer than the user recent
+     feedback
+     */
     public mutating func giveFeedback(_ feedback: Feedback) {
+        if let recentFeedback = recentFeedback,
+            recentFeedback > feedback {
+            return
+        }
+
         feedbacks.insert(feedback, at: 0)
     }
 }

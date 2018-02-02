@@ -59,6 +59,26 @@ class UserSpec: QuickSpec {
                     expect(user.recentFeedback).to(equal(mostRecentFeedback))
                 }
             }
+
+            context("give user feedback") {
+                it("should prepend the new feedback") {
+                    let feedback = Feedback(id: 10, date: Date())
+
+                    user.giveFeedback(feedback)
+
+                    expect(user.recentFeedback).to(equal(feedback))
+                }
+
+                it("should ignore outdated feedback") {
+                    let oldDate = oldFeedback.date.addingTimeInterval(-60)
+                    let feedback = Feedback(id: 10, date: oldDate)
+
+                    user.giveFeedback(feedback)
+
+                    expect(user.recentFeedback).toNot(equal(feedback))
+                    expect(user.feedbacks.count).to(equal(feedbacks.count))
+                }
+            }
         }
     }
 }

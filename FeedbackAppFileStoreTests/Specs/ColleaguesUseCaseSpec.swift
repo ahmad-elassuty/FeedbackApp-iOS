@@ -43,7 +43,6 @@ class ColleaguesUseCaseSpec: QuickSpec {
                             result = storeResult
                         }
 
-                        expect(result?.value).toEventuallyNot(beNil())
                         expect(result?.value).toEventually(equal([self.user]))
                     }
                 }
@@ -60,7 +59,20 @@ class ColleaguesUseCaseSpec: QuickSpec {
                 }
 
                 context("fetch colleagues from unstructured file") {
-                    it("should fail to parse data") {
+                    it("should fail to parse unstructured user") {
+                        let store = ColleaguesUseCase(
+                            dataFileName: "unformatted_data",
+                            bundle: bundle
+                        )
+
+                        store.fetchColleagues { storeResult in
+                            result = storeResult
+                        }
+
+                        expect(result?.error).toEventually(equal(.cannotParseData))
+                    }
+
+                    it("should fail to parse different file structure") {
                         let store = ColleaguesUseCase(
                             dataFileName: "unstructured_data",
                             bundle: bundle
@@ -87,22 +99,22 @@ class ColleaguesUseCaseSpec: QuickSpec {
 
                 context("not valid id") {
                     it("should return user not found") {
-                        store.fetchColleagueProfile(id: -1) { storeResult in
+                        let invalidId = -1
+                        store.fetchColleagueProfile(id: invalidId) { storeResult in
                             result = storeResult
                         }
 
-                        expect(result?.isError).toEventually(beTrue())
                         expect(result?.error).toEventually(equal(.userNotFound))
                     }
                 }
 
-                context("valid user") {
+                context("valid user id") {
                     it("should return user") {
-                        store.fetchColleagueProfile(id: 1) { storeResult in
+                        store.fetchColleagueProfile(id: self.user.id) { storeResult in
                             result = storeResult
                         }
 
-                        expect(result?.isSuccess).toEventually(beTrue())
+                        expect(result?.value?.id).toEventually(equal(self.user.id))
                     }
                 }
             }

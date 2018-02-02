@@ -79,7 +79,7 @@ private extension ColleagueProfileViewController {
     }
 
     func prepareNavigationItems() {
-        title = "History"
+        title = "Profile"
 
         if #available(iOS 11.0, *) {
             navigationItem.largeTitleDisplayMode = .never

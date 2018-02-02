@@ -15,7 +15,6 @@ class FeedbackSpec: QuickSpec {
         describe("Feedback Model") {
             let id              = 1
             let feedbackDate    = Date()
-
             var feedback: Feedback!
 
             beforeEach {

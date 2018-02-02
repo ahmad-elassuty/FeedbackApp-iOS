@@ -46,7 +46,10 @@ private extension ColleagueProfileTableHeader {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         pinViewToEdges(contentView)
 
-        // Prepare size
+        // Style subviews
+        colleagueAvatarImageView.roundCorners()
+
+        // Adjust size
         bounds = CGRect(
             origin: .zero,
             size: systemLayoutSizeFitting(UILayoutFittingCompressedSize)

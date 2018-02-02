@@ -17,6 +17,7 @@
 		2033C62A20247F540034B82B /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033C62920247F540034B82B /* UIView+Constraints.swift */; };
 		2033C62D20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033C62B20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.swift */; };
 		2033C62E20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2033C62C20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.xib */; };
+		2033C6302024A1DE0034B82B /* Date+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033C62F2024A1DE0034B82B /* Date+Localized.swift */; };
 		20408BF2202112C000B36488 /* ColleaguesUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20408BF1202112C000B36488 /* ColleaguesUseCaseSpec.swift */; };
 		204DCEEB2020A38C0065B7DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCEEA2020A38C0065B7DF /* AppDelegate.swift */; };
 		204DCEF22020A38C0065B7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204DCEF12020A38C0065B7DF /* Assets.xcassets */; };
@@ -165,6 +166,7 @@
 		2033C62920247F540034B82B /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		2033C62B20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileFeedbackTableViewCell.swift; sourceTree = "<group>"; };
 		2033C62C20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColleagueProfileFeedbackTableViewCell.xib; sourceTree = "<group>"; };
+		2033C62F2024A1DE0034B82B /* Date+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Localized.swift"; sourceTree = "<group>"; };
 		20408BF1202112C000B36488 /* ColleaguesUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesUseCaseSpec.swift; sourceTree = "<group>"; };
 		204DCEE72020A38C0065B7DF /* FeedbackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedbackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		204DCEEA2020A38C0065B7DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -597,6 +599,7 @@
 				20C861CA2022120400AD6391 /* UITableView+GenericDequeue.swift */,
 				20C861CE2022261B00AD6391 /* UIView+Rounded.swift */,
 				2033C62920247F540034B82B /* UIView+Constraints.swift */,
+				2033C62F2024A1DE0034B82B /* Date+Localized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1136,6 +1139,7 @@
 				20C861AC2022007A00AD6391 /* ColleaguesListTableViewCell.swift in Sources */,
 				20C861CB2022120400AD6391 /* UITableView+GenericDequeue.swift in Sources */,
 				20C861BD202200EE00AD6391 /* ColleagueProfileViewController.swift in Sources */,
+				2033C6302024A1DE0034B82B /* Date+Localized.swift in Sources */,
 				2033C62120239F3D0034B82B /* Theme.swift in Sources */,
 				20C861C5202210F100AD6391 /* App.swift in Sources */,
 				20C861A82022003D00AD6391 /* ColleaguesListViewController.swift in Sources */,

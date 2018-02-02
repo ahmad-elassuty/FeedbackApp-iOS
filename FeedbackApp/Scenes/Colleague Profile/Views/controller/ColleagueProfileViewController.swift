@@ -14,7 +14,7 @@ class ColleagueProfileViewController: BaseViewController {
 
     var interactor  : ColleagueProfileBusinessLogic!
     var router      : ColleagueProfileRoutingLogic!
-    var colleague   : ColleagueProfile.Colleague!
+    var colleague   : ColleagueProfile.Colleague?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,29 +41,36 @@ extension ColleagueProfileViewController: ColleagueProfileDisplayView {
 // MARK: - Table View Data Source
 extension ColleagueProfileViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
+        guard let colleague = colleague,
+            !colleague.feedbacks.isEmpty else {
+            return 0
+        }
+
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return colleague?.feedbacks.count ?? 0
+        return colleague!.feedbacks.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let feedback = colleague!.feedbacks[indexPath.row]
+        let cell: ColleagueProfileFeedbackTableViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
+        cell.prepareForUse(feedback: feedback)
+
+        return cell
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let colleague = colleague else {
-            return nil
-        }
-
-        return "Feedback given to \(colleague.name.capitalized)"
+        return "Feedbacks"
     }
 }
 
 // MARK: - Private Methods
 private extension ColleagueProfileViewController {
     func fetchColleague() {
+        let request = ColleagueProfile.Fetch.Request()
+        interactor.fetchColleagueProfile(request)
     }
 
     func prepareView() {
@@ -72,7 +79,7 @@ private extension ColleagueProfileViewController {
     }
 
     func prepareNavigationItems() {
-        title = "Profile"
+        title = "History"
 
         if #available(iOS 11.0, *) {
             navigationItem.largeTitleDisplayMode = .never
@@ -86,12 +93,12 @@ private extension ColleagueProfileViewController {
         colleagueProfileHeaderView = ColleagueProfileTableHeader()
         colleagueProfileTableView.tableHeaderView = colleagueProfileHeaderView
 
-        colleagueProfileTableView.register(UITableViewCell.self, forCellReuseIdentifier: "defaultCell")
+        colleagueProfileTableView.register(ColleagueProfileFeedbackTableViewCell.self)
     }
 
     func reloadData() {
-        let name = colleague.name
-        let avatarURL = colleague.avatarURL
+        let name = colleague!.name
+        let avatarURL = colleague!.avatarURL
 
         colleagueProfileHeaderView.setColleague(name: name, imageURL: avatarURL)
         colleagueProfileTableView.reloadData()

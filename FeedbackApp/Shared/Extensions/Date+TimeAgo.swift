@@ -22,7 +22,7 @@ extension Date {
         }
 
         let interval = Calendar.current.dateComponents(
-            [.month, .day, .hour, .minute], from: self, to: Date()
+            [.month, .day, .hour, .minute], from: self, to: Date.currentLocalizedDate
         )
 
         if let month = interval.month, month > 0 {

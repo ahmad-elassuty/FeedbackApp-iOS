@@ -25,7 +25,7 @@ protocol ColleagueProfilePresentationLogic {
 protocol ColleagueProfileBusinessLogic: class {
     init(presenter: ColleagueProfilePresentationLogic)
 
-    func fetchColleagueProfile(_ request: FetchColleagueProfileRequest)
+    func fetchColleagueProfile(_ request: ColleagueProfile.Fetch.Request)
 }
 
 // Routing

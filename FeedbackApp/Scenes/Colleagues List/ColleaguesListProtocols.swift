@@ -21,8 +21,8 @@ protocol ColleaguesListDisplayView: class {
 protocol ColleaguesListBusinessLogic: class {
     init(presenter: ColleaguesListPresentationLogic)
 
-    func fetch(_ request: FetchColleaguesRequest)
-    func giveFeedback(_ request: GiveColleagueFeedbackRequest)
+    func fetch(_ request: ColleaguesList.Fetch.Request)
+    func giveFeedback(_ request: ColleaguesList.GiveFeedback.Request)
 }
 
 // Presenter

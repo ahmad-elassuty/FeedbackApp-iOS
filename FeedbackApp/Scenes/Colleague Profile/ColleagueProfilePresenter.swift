@@ -43,7 +43,7 @@ private extension ColleagueProfilePresenter {
     }
 
     func transformDomainFeedback(_ feedback: Feedback) -> ColleagueProfile.Feedback {
-        let category    = Theme.DateCategory(date: feedback.date)
+        let category    = Theme.DateCategory(date: feedback.date)!
         let dateString  = feedback.date.timeAgoString
 
         return ColleagueProfile.Feedback(

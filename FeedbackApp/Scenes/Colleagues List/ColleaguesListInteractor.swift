@@ -9,8 +9,8 @@
 import FeedbackAppDomain
 
 final class ColleaguesListInteractor: ColleaguesListBusinessLogic, ColleaguesListDataStore {
-    var presenter: ColleaguesListPresentationLogic
-    var users: [User]
+    var presenter   : ColleaguesListPresentationLogic
+    var users       : [User]
 
     let fetchColleaguesWorker   = FetchColleaguesWorker()
     let giveFeedbackWorker      = GiveColleagueFeedbackWorker()
@@ -19,8 +19,11 @@ final class ColleaguesListInteractor: ColleaguesListBusinessLogic, ColleaguesLis
         self.presenter  = presenter
         self.users = []
     }
+}
 
-    func fetch(_ request: FetchColleaguesRequest) {
+// MARK: - Fetch
+extension ColleaguesListInteractor {
+    func fetch(_ request: ColleaguesList.Fetch.Request) {
         fetchColleaguesWorker.fetchColleagues(request: request) { result in
             guard result.isSuccess else {
                 let response = ColleaguesList.Fetch.Response(error: result.error!)
@@ -33,14 +36,17 @@ final class ColleaguesListInteractor: ColleaguesListBusinessLogic, ColleaguesLis
             presenter.presentFetchedColleagues(response)
         }
     }
+}
 
+// MARK: - Give feedback
+extension ColleaguesListInteractor {
     /**
      This method simulates giving specific user a feedback
 
      The real implementation of this function should call the concerned worker to
      do the real business logic.
      */
-    func giveFeedback(_ request: GiveColleagueFeedbackRequest) {
+    func giveFeedback(_ request: ColleaguesList.GiveFeedback.Request) {
         let id = request.userId
         let userIndex = users.index { $0.id == id }
 
@@ -51,11 +57,10 @@ final class ColleaguesListInteractor: ColleaguesListBusinessLogic, ColleaguesLis
             return
         }
 
-        var user = users[index]
-        let feedback = Feedback(id: 1, date: Date())
-        user.giveFeedback(feedback)
+        let feedback = Feedback(id: 1, date: Date.currentLocalizedDate)
+        users[index].giveFeedback(feedback)
 
-        let response = ColleaguesList.GiveFeedback.Response(value: user)
+        let response = ColleaguesList.GiveFeedback.Response(value: users[index])
         presenter.presentGiveFeedback(response)
     }
 }

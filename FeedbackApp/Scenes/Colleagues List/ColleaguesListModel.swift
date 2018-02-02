@@ -12,7 +12,7 @@ struct ColleaguesList {
     struct Colleague: Identifiable, Equatable {
         let id                      : Int
         let name                    : String
-        let lastFeedbackDate        : Date?
+        let lastFeedbackDateCategory: Theme.DateCategory?
         let lastFeedbackDateString  : String?
         let avatarURL               : URL?
     }
@@ -20,7 +20,8 @@ struct ColleaguesList {
 
 extension ColleaguesList {
     enum GiveFeedback {
-        typealias Response = Result<User, ColleaguesUseCaseError>
+        typealias Request   = GiveColleagueFeedbackRequest
+        typealias Response  = Result<User, ColleaguesUseCaseError>
 
         struct ViewModel {
             let colleague: Colleague
@@ -30,7 +31,8 @@ extension ColleaguesList {
 
 extension ColleaguesList {
     enum Fetch {
-        typealias Response = Result<[User], ColleaguesUseCaseError>
+        typealias Request   = FetchColleaguesRequest
+        typealias Response  = Result<[User], ColleaguesUseCaseError>
 
         struct ViewModel {
             let colleagues: [[Colleague]]

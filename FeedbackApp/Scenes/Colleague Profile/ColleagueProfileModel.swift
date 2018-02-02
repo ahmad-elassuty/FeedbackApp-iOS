@@ -25,6 +25,8 @@ extension ColleagueProfile {
 
 extension ColleagueProfile {
     enum Fetch {
+        struct Request {}
+
         typealias Response = Result<User, ColleaguesUseCaseError>
 
         struct ViewModel {

@@ -55,12 +55,11 @@ final class ColleaguesListTableViewCell: UITableViewCell {
 
 private extension ColleaguesListTableViewCell {
     func formatLastFeedbackLabel(_ colleague: ColleaguesList.Colleague) -> NSAttributedString? {
-        guard let date = colleague.lastFeedbackDate,
+        guard let theme = colleague.lastFeedbackDateCategory,
             let dateString = colleague.lastFeedbackDateString else {
             return nil
         }
 
-        let theme       = Theme.DateCategory(date: date)
         let fontSize    = lastFeedbackDateLabel.font.pointSize
         let font        = UIFont.systemFont(ofSize: fontSize, weight: .medium)
 

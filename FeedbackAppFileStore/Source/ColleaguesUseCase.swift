@@ -11,9 +11,11 @@ import Marshal
 
 public class ColleaguesUseCase: FeedbackAppDomain.ColleaguesUseCase {
     let dataFileName: String
+    let bundle: Bundle?
 
-    public init(dataFileName: String? = nil) {
-        self.dataFileName = dataFileName ?? Constants.dataFileName
+    public init(dataFileName: String? = nil, bundle: Bundle? = nil) {
+        self.dataFileName   = dataFileName ?? Constants.dataFileName
+        self.bundle         = bundle
     }
 
     public func fetchColleagues(completion: (Result<[User], FetchColleaguesError>) -> Void) {
@@ -30,15 +32,29 @@ public class ColleaguesUseCase: FeedbackAppDomain.ColleaguesUseCase {
     public func fetchColleagueProfile(
         id: User.IdentifierType,
         completion: (Result<User, FetchColleagueProfileError>) -> Void) {
-        let result: Result<User, FetchColleagueProfileError> = Result(error: .cannotPerformQueries)
-        completion(result)
+
+        fetchColleagues { result in
+            guard let users = result.value else {
+                return
+            }
+
+            let optionalUser = users.first { $0.id == id }
+            guard let user = optionalUser else {
+                let response: Result<User, FetchColleagueProfileError> = Result(error: .userNotFound)
+                completion(response)
+                return
+            }
+
+            let response: Result<User, FetchColleagueProfileError> = Result(value: user)
+            completion(response)
+        }
     }
 }
 
 private extension ColleaguesUseCase {
     func prepareFetchColleaguesResult() -> Result<[User], FetchColleaguesError> {
         do {
-            let JSON = try JSONFileReader.loadResource(dataFileName)
+            let JSON = try JSONFileReader.loadResource(dataFileName, bundle: bundle)
             let colleagues: [FSUser] = try JSON.value(for: "users")
             let value = colleagues.map({ $0.asDomainUser() })
 

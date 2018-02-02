@@ -31,7 +31,7 @@ private extension ColleaguesListViewController {
     }
 
     @objc func fetchColleagues() {
-        let request = FetchColleaguesRequest()
+        let request = ColleaguesList.Fetch.Request()
         interactor.fetch(request)
     }
 

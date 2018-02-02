@@ -16,5 +16,5 @@ public enum GiveColleagueFeedbackError: Error {
 }
 
 public enum FetchColleagueProfileError: Error {
-    case cannotPerformQueries
+    case userNotFound
 }

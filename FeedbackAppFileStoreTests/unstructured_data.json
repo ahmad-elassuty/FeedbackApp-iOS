@@ -1,0 +1,9 @@
+{
+    "users": [{
+        "id": 1,
+        "name": 1,
+        "email": "john@feedback.com",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg"
+    }
+]
+}

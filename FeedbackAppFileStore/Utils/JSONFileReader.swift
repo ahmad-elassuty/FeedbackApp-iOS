@@ -14,8 +14,8 @@ enum JSONFileReaderError: Error {
 class JSONFileReader {
     private init() {}
 
-    static func loadResource(_ resource: String) throws -> [String: Any] {
-        let bundle = Bundle(for: self.self)
+    static func loadResource(_ resource: String, bundle: Bundle? = nil) throws -> [String: Any] {
+        let bundle = bundle ?? Bundle(for: self.self)
         let filePath = bundle.path(forResource: "\(resource).json", ofType: nil)
 
         guard let path = filePath else {

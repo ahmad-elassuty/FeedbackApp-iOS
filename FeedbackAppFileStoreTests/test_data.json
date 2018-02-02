@@ -1,0 +1,19 @@
+{
+    "users": [
+              {
+              "id": 1,
+              "name": "John Doe",
+              "email": "john@feedback.com",
+              "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg",
+              "last_interactions": [
+                                    {
+                                    "id": 1,
+                                    "date": "2017-04-22T07:10:59Z"
+                                    },
+                                    {
+                                    "id": 2,
+                                    "date": "2017-01-31T22:59:59Z"
+                                    }
+                                    ]
+              }]
+}

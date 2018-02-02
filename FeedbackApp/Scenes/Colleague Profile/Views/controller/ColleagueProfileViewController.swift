@@ -14,7 +14,7 @@ class ColleagueProfileViewController: BaseViewController {
 
     var interactor  : ColleagueProfileBusinessLogic!
     var router      : ColleagueProfileRoutingLogic!
-    var colleague   : ColleagueProfile.Fetch.ViewModel!
+    var colleague   : ColleagueProfile.Colleague!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class ColleagueProfileViewController: BaseViewController {
 // MARK: - Colleague Profile Display View
 extension ColleagueProfileViewController: ColleagueProfileDisplayView {
     func didFetchColleagueProfile(model: ColleagueProfile.Fetch.ViewModel) {
-        colleague = model
+        colleague = model.colleague
         reloadData()
     }
 
@@ -45,7 +45,7 @@ extension ColleagueProfileViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return colleague?.feedbackDates.count ?? 0
+        return colleague?.feedbacks.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

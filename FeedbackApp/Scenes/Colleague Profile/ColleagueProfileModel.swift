@@ -6,16 +6,29 @@
 //  Copyright © 2018 Challenges. All rights reserved.
 //
 
-import Foundation
+import FeedbackAppDomain
 
 enum ColleagueProfile {}
 
 extension ColleagueProfile {
+    struct Feedback {
+        let dateCategory    : Theme.DateCategory
+        let dateString      : String
+    }
+
+    struct Colleague {
+        let name     : String
+        let avatarURL: URL?
+        let feedbacks: [Feedback]
+    }
+}
+
+extension ColleagueProfile {
     enum Fetch {
+        typealias Response = Result<User, ColleaguesUseCaseError>
+
         struct ViewModel {
-            let name            : String
-            let avatarURL       : URL?
-            let feedbackDates   : [String]
+            let colleague: Colleague
         }
     }
 }

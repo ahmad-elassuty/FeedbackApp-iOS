@@ -17,6 +17,8 @@ protocol ColleagueProfileDisplayView: class {
 // Presenter
 protocol ColleagueProfilePresentationLogic {
     init(displayView: ColleagueProfileDisplayView)
+
+    func presentFetchedColleague(response: ColleagueProfile.Fetch.Response)
 }
 
 // Interactor

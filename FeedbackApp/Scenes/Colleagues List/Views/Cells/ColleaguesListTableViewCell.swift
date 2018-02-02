@@ -60,13 +60,13 @@ private extension ColleaguesListTableViewCell {
             return nil
         }
 
-        let category = Theme.DateCategory(date: date)
-        let fontSize = lastFeedbackDateLabel.font.pointSize
-        let font: UIFont = .systemFont(ofSize: fontSize, weight: .medium)
+        let theme       = Theme.DateCategory(date: date)
+        let fontSize    = lastFeedbackDateLabel.font.pointSize
+        let font        = UIFont.systemFont(ofSize: fontSize, weight: .medium)
 
         // Prepare text attributes
         let dateAttributes: [NSAttributedStringKey: AnyObject] = [
-            .foregroundColor: category.color,
+            .foregroundColor: theme.color,
             .font: font
         ]
 

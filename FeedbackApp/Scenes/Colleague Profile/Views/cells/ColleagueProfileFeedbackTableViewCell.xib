@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="74" id="KGk-i7-Jjw" customClass="ColleagueProfileFeedbackTableViewCell" customModule="FeedbackApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="351" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="351" height="73.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXj-z3-2gj">
+                        <rect key="frame" x="20" y="15" width="311" height="43.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKr-a3-ajk">
+                                <rect key="frame" x="0.0" y="0.0" width="311" height="43.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iKr-a3-ajk" firstAttribute="leading" secondItem="KXj-z3-2gj" secondAttribute="leading" id="4MA-Gp-H8a"/>
+                            <constraint firstAttribute="bottom" secondItem="iKr-a3-ajk" secondAttribute="bottom" id="7p3-Z2-aQb"/>
+                            <constraint firstItem="iKr-a3-ajk" firstAttribute="top" secondItem="KXj-z3-2gj" secondAttribute="top" id="ROP-MT-9b5"/>
+                            <constraint firstAttribute="trailing" secondItem="iKr-a3-ajk" secondAttribute="trailing" id="sSR-Bf-jgw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="KXj-z3-2gj" secondAttribute="bottom" constant="15" id="ldq-qO-b9q"/>
+                    <constraint firstAttribute="trailing" secondItem="KXj-z3-2gj" secondAttribute="trailing" constant="20" id="o25-t2-4G6"/>
+                    <constraint firstItem="KXj-z3-2gj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="qOJ-Nm-I6L"/>
+                    <constraint firstItem="KXj-z3-2gj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="s3g-Yy-Pmb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="feedbackLabel" destination="iKr-a3-ajk" id="0xO-3L-mRR"/>
+            </connections>
+            <point key="canvasLocation" x="49.5" y="77"/>
+        </tableViewCell>
+    </objects>
+</document>

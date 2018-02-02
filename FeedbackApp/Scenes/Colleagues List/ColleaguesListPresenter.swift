@@ -32,6 +32,10 @@ extension ColleaguesListPresenter: ColleaguesListPresentationLogic {
             return
         }
 
+        /**
+         Do grouping and sorting in a background serial queue
+          to guarantee transactional updates
+        */
         let workItem = DispatchWorkItem { [weak self] in
             let viewModel = self?.buildFetchViewModel(users: users)
 
@@ -53,7 +57,7 @@ extension ColleaguesListPresenter: ColleaguesListPresentationLogic {
             return
         }
 
-        let colleague   = transformUserToColleague(user)
+        let colleague   = transformDomainUser(user)
         let viewModel = ColleaguesList.GiveFeedback.ViewModel(colleague: colleague)
         dispalyView?.didGiveFeedback(model: viewModel)
     }
@@ -83,12 +87,13 @@ extension ColleaguesListPresenter {
 
         // Form final groups
         let userGroups: [[User]] = [groups[0] + groups[1], groups[2]]
-        return transformUserGroupsToViewModel(userGroups: userGroups)
+        return transformUserGroups(userGroups: userGroups)
     }
 }
 
+// MARK: - Private Methods
 private extension ColleaguesListPresenter {
-    func transformUserToColleague(_ user: User) -> ColleaguesList.Colleague {
+    func transformDomainUser(_ user: User) -> ColleaguesList.Colleague {
         let url = URL(string: user.avatarURLString ?? "")
         let lastFeedbackDate        = user.recentFeedback?.date
         let lastFeedbackDateString  = user.recentFeedback?.date.timeAgoString
@@ -101,9 +106,9 @@ private extension ColleaguesListPresenter {
         )
     }
 
-    func transformUserGroupsToViewModel(userGroups: [[User]]) -> ColleaguesList.Fetch.ViewModel {
+    func transformUserGroups(userGroups: [[User]]) -> ColleaguesList.Fetch.ViewModel {
         func transformUsersToColleagues(_ users: [User]) -> [ColleaguesList.Colleague] {
-            return users.map(transformUserToColleague)
+            return users.map(transformDomainUser)
         }
 
         let result = userGroups.map(transformUsersToColleagues)

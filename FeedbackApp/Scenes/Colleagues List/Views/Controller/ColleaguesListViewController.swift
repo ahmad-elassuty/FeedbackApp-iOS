@@ -8,76 +8,6 @@
 
 import UIKit
 
-// MARK: Data Source Extension
-fileprivate enum Section: Int {
-    case giveFeedback,
-    recentlyInteractedWith
-
-    var title: String {
-        switch self {
-        case .giveFeedback:
-            return "Give them some feedback"
-        case .recentlyInteractedWith:
-            return "You gave them feedback recently"
-        }
-    }
-
-    var totalNumberOfSections: Int {
-        return 2
-    }
-}
-
-fileprivate extension Array where Element == [ColleaguesList.Colleague] {
-    typealias Colleague = ColleaguesList.Colleague
-    var numberOfSections: Int {
-        return count
-    }
-
-    subscript(index: IndexPath) -> Colleague {
-        get {
-            return self[index.section][index.row]
-        }
-        set {
-            self[index.section].insert(newValue, at: index.row)
-        }
-    }
-
-    func isEmptySection(_ section: Section) -> Bool {
-        return self[section.rawValue].isEmpty
-    }
-
-    func titleForSection(_ section: Section) -> String? {
-        return isEmptySection(section) ? nil : section.title
-    }
-
-    func numberOfColleagues(inSection section: Section) -> Int {
-        return self[section.rawValue].count
-    }
-
-    func indexPathOfColleague(_ colleague: Colleague) -> IndexPath? {
-        var row: Int?, section: Int?
-        for (index, grp) in enumerated() {
-            row = grp.index(of: colleague)
-
-            if row != nil {
-                section = index
-                break
-            }
-        }
-
-        if row == nil || section == nil {
-            return nil
-        }
-
-        return IndexPath(row: row!, section: section!)
-    }
-
-    @discardableResult
-    mutating func removeColleagueAtIndexPath(_ indexPath: IndexPath) -> Colleague {
-        return self[indexPath.section].remove(at: indexPath.row)
-    }
-}
-
 // MARK: - View Controller
 class ColleaguesListViewController: BaseViewController {
     @IBOutlet weak var colleaguesTableView: UITableView!
@@ -117,8 +47,6 @@ private extension ColleaguesListViewController {
     func prepareColleaguesTableView() {
         colleaguesTableView.estimatedRowHeight  = 100
         colleaguesTableView.rowHeight           = UITableViewAutomaticDimension
-        colleaguesTableView.tableHeaderView     = UIView()
-        colleaguesTableView.tableFooterView     = UIView()
 
         colleaguesTableView.register(ColleaguesListTableViewCell.self)
     }
@@ -227,5 +155,75 @@ extension ColleaguesListViewController: ColleaguesListDisplayView {
         case .giveColleagueFeedbackError: break
         default: break
         }
+    }
+}
+
+// MARK: Data Source Extension
+fileprivate enum Section: Int {
+    case giveFeedback,
+    recentlyInteractedWith
+
+    var title: String {
+        switch self {
+        case .giveFeedback:
+            return "Give them some feedback"
+        case .recentlyInteractedWith:
+            return "You gave them feedback recently"
+        }
+    }
+
+    var totalNumberOfSections: Int {
+        return 2
+    }
+}
+
+fileprivate extension Array where Element == [ColleaguesList.Colleague] {
+    typealias Colleague = ColleaguesList.Colleague
+    var numberOfSections: Int {
+        return count
+    }
+
+    subscript(index: IndexPath) -> Colleague {
+        get {
+            return self[index.section][index.row]
+        }
+        set {
+            self[index.section].insert(newValue, at: index.row)
+        }
+    }
+
+    func isEmptySection(_ section: Section) -> Bool {
+        return self[section.rawValue].isEmpty
+    }
+
+    func titleForSection(_ section: Section) -> String? {
+        return isEmptySection(section) ? nil : section.title
+    }
+
+    func numberOfColleagues(inSection section: Section) -> Int {
+        return self[section.rawValue].count
+    }
+
+    func indexPathOfColleague(_ colleague: Colleague) -> IndexPath? {
+        var row: Int?, section: Int?
+        for (index, grp) in enumerated() {
+            row = grp.index(of: colleague)
+
+            if row != nil {
+                section = index
+                break
+            }
+        }
+
+        if row == nil || section == nil {
+            return nil
+        }
+
+        return IndexPath(row: row!, section: section!)
+    }
+
+    @discardableResult
+    mutating func removeColleagueAtIndexPath(_ indexPath: IndexPath) -> Colleague {
+        return self[indexPath.section].remove(at: indexPath.row)
     }
 }

@@ -9,7 +9,7 @@
 import FeedbackAppDomain
 
 final class ColleagueProfileInteractor: ColleagueProfileDataStore {
-    var user        : User?
+    var user        : User!
     var presenter   : ColleagueProfilePresentationLogic
 
     init(presenter: ColleagueProfilePresentationLogic) {

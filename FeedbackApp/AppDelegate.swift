@@ -34,6 +34,8 @@ private extension AppDelegate {
             navigationController.navigationBar.prefersLargeTitles = true
         }
 
+        Theme.configure(navigationController)
+
         return navigationController
     }
 }

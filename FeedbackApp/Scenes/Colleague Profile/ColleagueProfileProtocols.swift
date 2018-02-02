@@ -9,7 +9,7 @@
 import FeedbackAppDomain
 
 // View
-protocol ColleagueProfileDisplayView: class {
+protocol ColleagueProfileDisplayView: class {    
     func didFetchColleagueProfile(model: ColleagueProfile.Fetch.ViewModel)
     func failedToFetchColleagueProfile(error: ColleaguesUseCaseError)
 }
@@ -36,5 +36,5 @@ protocol ColleagueProfileRoutingLogic {
 
 // Data Store
 protocol ColleagueProfileDataStore: class {
-    var user: User? { get set }
+    var user: User! { get set }
 }

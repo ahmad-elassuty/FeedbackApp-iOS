@@ -54,51 +54,13 @@ final class ColleaguesListTableViewCell: UITableViewCell {
 }
 
 private extension ColleaguesListTableViewCell {
-    /**
-     Represents different date groups to provide
-     the visual properties of the input date
-     */
-    enum FeedbackDateCategory {
-        case
-        lessThanMonth,
-        lessThanYear,
-        moreThanYear
-
-        var color: UIColor {
-            switch self {
-            case .lessThanMonth:
-                return #colorLiteral(red: 0, green: 0.3921568627, blue: 0, alpha: 1)
-            case .lessThanYear:
-                return #colorLiteral(red: 0.9843137255, green: 0.6784313725, blue: 0.2549019608, alpha: 1)
-            case .moreThanYear:
-                return #colorLiteral(red: 0.7529411765, green: 0.2235294118, blue: 0.168627451, alpha: 1)
-            }
-        }
-
-        init(date: Date) {
-            let now = Date()
-            let monthAgoInterval: TimeInterval = -30 * 24 * 60 * 60
-            let monthAgo = now.addingTimeInterval(monthAgoInterval)
-            let yearAgo = now.addingTimeInterval(12 * monthAgoInterval)
-            
-            switch date {
-            case _ where date > monthAgo:
-                self = .lessThanMonth
-            case _ where date > yearAgo:
-                self = .lessThanYear
-            default:
-                self = .moreThanYear
-            }
-        }
-    }
-
     func formatLastFeedbackLabel(_ colleague: ColleaguesList.Colleague) -> NSAttributedString? {
         guard let date = colleague.lastFeedbackDate,
             let dateString = colleague.lastFeedbackDateString else {
             return nil
         }
 
-        let category = FeedbackDateCategory(date: date)
+        let category = Theme.DateCategory(date: date)
         let fontSize = lastFeedbackDateLabel.font.pointSize
         let font: UIFont = .systemFont(ofSize: fontSize, weight: .medium)
 

@@ -11,6 +11,10 @@
 		202EEC52202140D20038A170 /* ServerDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202EEC51202140D20038A170 /* ServerDateFormatter.swift */; };
 		202EEC55202143D00038A170 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202EEC54202143D00038A170 /* Constants.swift */; };
 		202EEC58202145A00038A170 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202EEC57202145A00038A170 /* Errors.swift */; };
+		2033C62120239F3D0034B82B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033C62020239F3D0034B82B /* Theme.swift */; };
+		2033C6262023AAD80034B82B /* ColleagueProfileTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2033C6252023AAD80034B82B /* ColleagueProfileTableHeader.xib */; };
+		2033C6282023AAF20034B82B /* ColleagueProfileTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033C6272023AAF20034B82B /* ColleagueProfileTableHeader.swift */; };
+		2033C62A20247F540034B82B /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033C62920247F540034B82B /* UIView+Constraints.swift */; };
 		20408BF2202112C000B36488 /* ColleaguesUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20408BF1202112C000B36488 /* ColleaguesUseCaseSpec.swift */; };
 		204DCEEB2020A38C0065B7DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DCEEA2020A38C0065B7DF /* AppDelegate.swift */; };
 		204DCEF22020A38C0065B7DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 204DCEF12020A38C0065B7DF /* Assets.xcassets */; };
@@ -153,6 +157,10 @@
 		202EEC51202140D20038A170 /* ServerDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDateFormatter.swift; sourceTree = "<group>"; };
 		202EEC54202143D00038A170 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		202EEC57202145A00038A170 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		2033C62020239F3D0034B82B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		2033C6252023AAD80034B82B /* ColleagueProfileTableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColleagueProfileTableHeader.xib; sourceTree = "<group>"; };
+		2033C6272023AAF20034B82B /* ColleagueProfileTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileTableHeader.swift; sourceTree = "<group>"; };
+		2033C62920247F540034B82B /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		20408BF1202112C000B36488 /* ColleaguesUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesUseCaseSpec.swift; sourceTree = "<group>"; };
 		204DCEE72020A38C0065B7DF /* FeedbackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedbackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		204DCEEA2020A38C0065B7DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -292,6 +300,31 @@
 				202EEC57202145A00038A170 /* Errors.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		2033C6222023A2F90034B82B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				20C861BB202200EE00AD6391 /* ColleagueProfileViewController.swift */,
+				20C861BC202200EE00AD6391 /* ColleagueProfileViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		2033C6232023A30D0034B82B /* cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		2033C6242023AAB30034B82B /* custom views */ = {
+			isa = PBXGroup;
+			children = (
+				2033C6272023AAF20034B82B /* ColleagueProfileTableHeader.swift */,
+				2033C6252023AAD80034B82B /* ColleagueProfileTableHeader.xib */,
+			);
+			path = "custom views";
 			sourceTree = "<group>";
 		};
 		20408BF02021129500B36488 /* Specs */ = {
@@ -546,6 +579,7 @@
 			children = (
 				20C861C4202210F100AD6391 /* App.swift */,
 				20C861C62022111300AD6391 /* ColleaguesListConstants.swift */,
+				2033C62020239F3D0034B82B /* Theme.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -556,6 +590,7 @@
 				20C861C82022115F00AD6391 /* Date+TimeAgo.swift */,
 				20C861CA2022120400AD6391 /* UITableView+GenericDequeue.swift */,
 				20C861CE2022261B00AD6391 /* UIView+Rounded.swift */,
+				2033C62920247F540034B82B /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -606,8 +641,9 @@
 		20C861AE2022008B00AD6391 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				20C861BB202200EE00AD6391 /* ColleagueProfileViewController.swift */,
-				20C861BC202200EE00AD6391 /* ColleagueProfileViewController.xib */,
+				2033C6242023AAB30034B82B /* custom views */,
+				2033C6232023A30D0034B82B /* cells */,
+				2033C6222023A2F90034B82B /* controller */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -840,6 +876,7 @@
 				204DCEF52020A38C0065B7DF /* LaunchScreen.storyboard in Resources */,
 				204DCEF22020A38C0065B7DF /* Assets.xcassets in Resources */,
 				20C861AD2022007A00AD6391 /* ColleaguesListTableViewCell.xib in Resources */,
+				2033C6262023AAD80034B82B /* ColleagueProfileTableHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1084,12 +1121,14 @@
 				20C861B4202200BC00AD6391 /* ColleagueProfileSceneConfigurator.swift in Sources */,
 				20C861B0202200A800AD6391 /* ColleagueProfileInteractor.swift in Sources */,
 				20C861C92022115F00AD6391 /* Date+TimeAgo.swift in Sources */,
+				2033C6282023AAF20034B82B /* ColleagueProfileTableHeader.swift in Sources */,
 				20C861B2202200B100AD6391 /* ColleagueProfilePresenter.swift in Sources */,
 				20C861CF2022261B00AD6391 /* UIView+Rounded.swift in Sources */,
 				20C861C3202210D500AD6391 /* SceneConfigurator.swift in Sources */,
 				20C861AC2022007A00AD6391 /* ColleaguesListTableViewCell.swift in Sources */,
 				20C861CB2022120400AD6391 /* UITableView+GenericDequeue.swift in Sources */,
 				20C861BD202200EE00AD6391 /* ColleagueProfileViewController.swift in Sources */,
+				2033C62120239F3D0034B82B /* Theme.swift in Sources */,
 				20C861C5202210F100AD6391 /* App.swift in Sources */,
 				20C861A82022003D00AD6391 /* ColleaguesListViewController.swift in Sources */,
 				20C861992021FB8100AD6391 /* ColleaguesListSceneConfigurator.swift in Sources */,
@@ -1102,6 +1141,7 @@
 				20C861B8202200D200AD6391 /* ColleagueProfileModel.swift in Sources */,
 				20C861972021FB6C00AD6391 /* ColleaguesListPresenter.swift in Sources */,
 				20C861C72022111300AD6391 /* ColleaguesListConstants.swift in Sources */,
+				2033C62A20247F540034B82B /* UIView+Constraints.swift in Sources */,
 				20C861952021FB5F00AD6391 /* ColleaguesListInteractor.swift in Sources */,
 				20C861822021D6E600AD6391 /* GiveColleagueFeedbackWorker.swift in Sources */,
 			);

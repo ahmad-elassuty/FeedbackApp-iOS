@@ -11,12 +11,6 @@ import Foundation
 struct ColleaguesListSceneConfigurator: SceneConfigurator {
     static func configure() -> ColleaguesListViewController {
         let viewController  = ColleaguesListViewController()
-        configure(viewController: viewController)
-
-        return viewController
-    }
-
-    static func configure(viewController: ColleaguesListViewController) {
         let presenter       = ColleaguesListPresenter(displayView: viewController)
         let interactor      = ColleaguesListInteractor(presenter: presenter)
         let router          = ColleaguesListRouter(
@@ -25,5 +19,7 @@ struct ColleaguesListSceneConfigurator: SceneConfigurator {
         )
         viewController.interactor   = interactor
         viewController.router       = router
+
+        return viewController
     }
 }

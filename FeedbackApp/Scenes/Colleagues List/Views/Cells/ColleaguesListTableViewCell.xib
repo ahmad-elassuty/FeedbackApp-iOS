@@ -46,6 +46,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-aN-iG3">
                                         <rect key="frame" x="0.0" y="75.5" width="0.0" height="35"/>
                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="giveFeedback"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="wQK-sl-8Yc"/>
                                         </constraints>

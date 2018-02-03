@@ -24,16 +24,18 @@ final class ColleaguesListInteractor: ColleaguesListBusinessLogic, ColleaguesLis
 // MARK: - Fetch
 extension ColleaguesListInteractor {
     func fetch(_ request: ColleaguesList.Fetch.Request) {
-        fetchColleaguesWorker.fetchColleagues(request: request) { result in
+        fetchColleaguesWorker.fetchColleagues(request: request) { [weak self] result in
+            guard let `self` = self else { return }
+
             guard result.isSuccess else {
                 let response = ColleaguesList.Fetch.Response(error: result.error!)
-                presenter.presentFetchedColleagues(response)
+                self.presenter.presentFetchedColleagues(response)
                 return
             }
 
-            users = result.value!
-            let response = ColleaguesList.Fetch.Response(value: users)
-            presenter.presentFetchedColleagues(response)
+            self.users = result.value!
+            let response = ColleaguesList.Fetch.Response(value: self.users)
+            self.presenter.presentFetchedColleagues(response)
         }
     }
 }

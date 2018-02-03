@@ -10,5 +10,4 @@ protocol SceneConfigurator {
     associatedtype Controller
 
     static func configure() -> Controller
-    static func configure(viewController: Controller)
 }

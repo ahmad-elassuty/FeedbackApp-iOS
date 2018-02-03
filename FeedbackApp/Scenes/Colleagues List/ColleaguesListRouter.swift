@@ -20,18 +20,20 @@ final class ColleaguesListRouter: ColleaguesListRoutingLogic {
 
     func routeToColleagueProfile(colleague: ColleaguesList.Colleague) {
         let optionalUser = dataStore?.users.first(where: { $0.id == colleague.id })
-        guard let user = optionalUser else {
-            return
-        }
+        guard let user = optionalUser else { return }
 
-        let controller = ColleagueProfileSceneConfigurator.configure()
-        controller.router.dataStore?.user = user
+        // Initialize destination controller
+        let destinationController = ColleagueProfileSceneConfigurator.configure()
 
+        // Pass data to destination controller
+        destinationController.router.dataStore?.user = user
+
+        // Navigate
         guard let navigationController = viewController?.navigationController else {
-            viewController?.present(controller, animated: true, completion: nil)
+            viewController?.present(destinationController, animated: true, completion: nil)
             return
         }
 
-        navigationController.pushViewController(controller, animated: true)
+        navigationController.pushViewController(destinationController, animated: true)
     }
 }

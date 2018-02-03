@@ -28,7 +28,21 @@ extension ColleagueProfileInteractor: ColleagueProfileBusinessLogic {
      do the real business logic.
      */
     func fetchColleagueProfile(_ request: ColleagueProfile.Fetch.Request) {
+        // Respond with the current data
         let response = ColleagueProfile.Fetch.Response(value: user)
         presenter.presentFetchedColleague(response: response)
+
+        // Get updated data
+        let workerRequest = FetchColleagueProfileRequest(userId: user.id)
+        worker.fetchColleagueProfile(request: workerRequest) { [weak self] result in
+            guard result.isSuccess else {
+                let response =  ColleagueProfile.Fetch.Response(error: result.error!)
+                self?.presenter.presentFetchedColleague(response: response)
+                return
+            }
+
+            let response =  ColleagueProfile.Fetch.Response(value: result.value!)
+            self?.presenter.presentFetchedColleague(response: response)
+        }
     }
 }

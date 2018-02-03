@@ -12,6 +12,18 @@ target 'FeedbackApp' do
   pod 'Kingfisher', '~> 4.6'
 end
 
+target 'FeedbackAppTests' do
+    use_frameworks!
+
+    include_testing_pods
+end
+
+target 'FeedbackAppUITests' do
+    use_frameworks!
+
+    include_testing_pods
+end
+
 target 'FeedbackAppDomain' do
     use_frameworks!
 end

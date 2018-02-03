@@ -20,6 +20,7 @@ class ColleaguesListViewController: BaseViewController {
         super.viewDidLoad()
         prepareView()
         fetchColleagues()
+        colleaguesTableView.reloadData()
     }
 }
 

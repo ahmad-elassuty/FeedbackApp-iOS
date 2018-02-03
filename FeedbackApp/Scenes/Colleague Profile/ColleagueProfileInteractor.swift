@@ -20,29 +20,31 @@ final class ColleagueProfileInteractor: ColleagueProfileDataStore {
 }
 
 extension ColleagueProfileInteractor: ColleagueProfileBusinessLogic {
-
-    /**
-     This method simulates fetching specific user
-
-     The real implementation of this function should call the concerned worker to
-     do the real business logic.
-     */
     func fetchColleagueProfile(_ request: ColleagueProfile.Fetch.Request) {
-        // Respond with the current data
-        let response = ColleagueProfile.Fetch.Response(value: user)
+        // Show old data
+        let response =  ColleagueProfile.Fetch.Response(value: user)
         presenter.presentFetchedColleague(response: response)
 
-        // Get updated data
-        let workerRequest = FetchColleagueProfileRequest(userId: user.id)
-        worker.fetchColleagueProfile(request: workerRequest) { [weak self] result in
-            guard result.isSuccess else {
-                let response =  ColleagueProfile.Fetch.Response(error: result.error!)
-                self?.presenter.presentFetchedColleague(response: response)
-                return
-            }
+        // Fetch updated data
+        /**
+         Important:
 
-            let response =  ColleagueProfile.Fetch.Response(value: result.value!)
-            self?.presenter.presentFetchedColleague(response: response)
-        }
+         Since file store does not persist giving feedback, changes to user
+         feedbacks will not reflect in the colleague profile fetched.
+         */
+
+//        let workerRequest = FetchColleagueProfileRequest(userId: user.id)
+//        worker.fetchColleagueProfile(request: workerRequest) { [weak self] result in
+//            guard let `self` = self else { return }
+//
+//            guard result.isSuccess else {
+//                let response =  ColleagueProfile.Fetch.Response(error: result.error!)
+//                self.presenter.presentFetchedColleague(response: response)
+//                return
+//            }
+//
+//            let response =  ColleagueProfile.Fetch.Response(value: result.value!)
+//            self.presenter.presentFetchedColleague(response: response)
+//        }
     }
 }

@@ -68,7 +68,7 @@ extension ColleaguesListPresenter {
     func buildFetchViewModel(users: [User]) -> ColleaguesList.Fetch.ViewModel {
         // Classifying colleagues based on interactions
         var groups: [[User]] = [[], [], []]
-        let thresholdDate = Date.currentLocalizedDate.addingTimeInterval(-self.thresholdDate)
+        let thresholdDate = Date().addingTimeInterval(-self.thresholdDate)
 
         for user in users {
             guard let recentFeedback = user.recentFeedback else {

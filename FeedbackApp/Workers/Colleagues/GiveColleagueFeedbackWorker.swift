@@ -9,11 +9,11 @@
 import FeedbackAppDomain
 import FeedbackAppFileStore
 
-struct GiveColleagueFeedbackRequest {
-    let userId      : User.IdentifierType
+public struct GiveColleagueFeedbackRequest {
+    let userId  : User.IdentifierType
 }
 
-final class GiveColleagueFeedbackWorker {
+public final class GiveColleagueFeedbackWorker {
     private let fileStore: FeedbackAppFileStore.ColleaguesUseCase = ColleaguesUseCase()
 
     typealias ResultType = Result<User, ColleaguesUseCaseError>

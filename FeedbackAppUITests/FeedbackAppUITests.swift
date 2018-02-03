@@ -93,6 +93,11 @@ class FeedbackAppUITests: QuickSpec {
             }
 
             context("when cell selected") {
+                afterEach {
+                    app.terminate()
+                    app.launch()
+                }
+
                 it("should navigate to profile view") {
                     let firstCell = tableView.cells.firstMatch
 
@@ -109,10 +114,7 @@ class FeedbackAppUITests: QuickSpec {
             var firstCell: XCUIElement!
 
             beforeEach {
-                app.terminate()
-                app.launch()
-
-                firstCell = tableView.cells.firstMatch
+                firstCell = tableView.cells.element(boundBy: 3)
                 firstCell.tap()
             }
 

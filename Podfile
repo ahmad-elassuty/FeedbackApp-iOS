@@ -6,42 +6,28 @@ def include_testing_pods
     pod 'Nimble'
 end
 
-target 'FeedbackApp' do
-  use_frameworks!
+use_frameworks!
 
+target 'FeedbackApp' do
   pod 'Kingfisher', '~> 4.6'
 end
 
+target 'FeedbackAppFileStore' do
+  pod 'Marshal', '~> 1.2'
+end
+
 target 'FeedbackAppTests' do
-    use_frameworks!
-
-    include_testing_pods
-end
-
-target 'FeedbackAppUITests' do
-    use_frameworks!
-
-    include_testing_pods
-end
-
-target 'FeedbackAppDomain' do
-    use_frameworks!
-end
-
-target 'FeedbackAppDomainTests' do
-  use_frameworks!
-
   include_testing_pods
 end
 
-target 'FeedbackAppFileStore' do
-    use_frameworks!
+target 'FeedbackAppUITests' do
+  include_testing_pods
+end
 
-    pod 'Marshal', '~> 1.2'
+target 'FeedbackAppDomainTests' do
+  include_testing_pods
 end
 
 target 'FeedbackAppFileStoreTests' do
-    use_frameworks!
-
     include_testing_pods
 end

@@ -21,23 +21,23 @@ extension Date {
             return "\(value) \(component) ago"
         }
 
-        let interval = Calendar.current.dateComponents(
-            [.month, .day, .hour, .minute], from: self, to: Date.currentLocalizedDate
+        let components = Calendar.current.dateComponents(
+            [.month, .day, .hour, .minute], from: self, to: Date()
         )
 
-        if let month = interval.month, month > 0 {
+        if let month = components.month, month > 0 {
             return _formatResultString(forValue: month, component: "month")
         }
 
-        if let day = interval.day, day > 0 {
+        if let day = components.day, day > 0 {
             return _formatResultString(forValue: day, component: "day")
         }
 
-        if let hour = interval.hour, hour > 0 {
+        if let hour = components.hour, hour > 0 {
             return _formatResultString(forValue: hour, component: "hour")
         }
 
-        if let minute = interval.minute, minute > 0 {
+        if let minute = components.minute, minute > 0 {
             return _formatResultString(forValue: minute, component: "minute")
         }
 

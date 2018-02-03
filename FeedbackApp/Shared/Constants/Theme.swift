@@ -66,7 +66,7 @@ extension Theme {
                 return nil
             }
 
-            let now = Date.currentLocalizedDate
+            let now = Date()
             let monthAgoInterval: TimeInterval = -30 * 24 * 60 * 60
             let monthAgo = now.addingTimeInterval(monthAgoInterval)
             let yearAgo = now.addingTimeInterval(12 * monthAgoInterval)

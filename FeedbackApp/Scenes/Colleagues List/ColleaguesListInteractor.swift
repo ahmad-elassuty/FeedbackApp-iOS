@@ -12,12 +12,14 @@ final class ColleaguesListInteractor: ColleaguesListBusinessLogic, ColleaguesLis
     var presenter   : ColleaguesListPresentationLogic
     var users       : [User]
 
-    let fetchColleaguesWorker   = FetchColleaguesWorker()
-    let giveFeedbackWorker      = GiveColleagueFeedbackWorker()
+    let fetchColleaguesWorker: FetchColleaguesWorker
+    let giveFeedbackWorker   : GiveColleagueFeedbackWorker
 
     init(presenter: ColleaguesListPresentationLogic) {
-        self.presenter  = presenter
-        self.users = []
+        self.presenter          = presenter
+        self.users              = []
+        fetchColleaguesWorker   = FetchColleaguesWorker()
+        giveFeedbackWorker      = GiveColleagueFeedbackWorker()
     }
 }
 
@@ -34,6 +36,7 @@ extension ColleaguesListInteractor {
             }
 
             self.users = result.value!
+
             let response = ColleaguesList.Fetch.Response(value: self.users)
             self.presenter.presentFetchedColleagues(response)
         }
@@ -49,17 +52,17 @@ extension ColleaguesListInteractor {
      do the real business logic.
      */
     func giveFeedback(_ request: ColleaguesList.GiveFeedback.Request) {
-        let id = request.userId
-        let userIndex = users.index { $0.id == id }
+        let requestedId = request.userId
+        let userIndex = users.index { $0.id == requestedId }
 
         guard let index = userIndex else {
-            let error = ColleaguesUseCaseError.giveColleagueFeedbackError("Colleague not found.")
+            let error: ColleaguesUseCaseError = .giveColleagueFeedbackError("Colleague not found.")
             let response = ColleaguesList.GiveFeedback.Response(error: error)
             presenter.presentGiveFeedback(response)
             return
         }
 
-        let feedback = Feedback(id: 1, date: Date.currentLocalizedDate)
+        let feedback = Feedback(id: 1, date: Date())
         users[index].giveFeedback(feedback)
 
         let response = ColleaguesList.GiveFeedback.Response(value: users[index])

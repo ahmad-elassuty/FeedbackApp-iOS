@@ -16,7 +16,7 @@ public protocol Identifiable {
 }
 
 extension Identifiable where Self: Equatable, IdentifierType: Equatable {
-    public static func ==(lhs: Self, rhs: Self) -> Bool {
+    public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.id == rhs.id
     }
 }

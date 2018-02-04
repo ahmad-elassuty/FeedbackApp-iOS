@@ -9,8 +9,8 @@
 import FeedbackAppDomain
 
 final class ColleaguesListInteractor: ColleaguesListBusinessLogic, ColleaguesListDataStore {
-    var presenter   : ColleaguesListPresentationLogic
-    var users       : [User]
+    var presenter: ColleaguesListPresentationLogic
+    var users    : [User]
 
     let fetchColleaguesWorker: FetchColleaguesWorker
     let giveFeedbackWorker   : GiveColleagueFeedbackWorker

@@ -9,8 +9,8 @@
 import FeedbackAppDomain
 
 final class ColleagueProfileInteractor: ColleagueProfileDataStore {
-    var user        : User!
-    var presenter   : ColleagueProfilePresentationLogic
+    var user     : User!
+    var presenter: ColleagueProfilePresentationLogic
 
     let worker = FetchColleagueProfileWorker()
 

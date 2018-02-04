@@ -12,8 +12,8 @@ enum ColleagueProfile {}
 
 extension ColleagueProfile {
     struct Feedback {
-        let dateCategory    : Theme.DateCategory
-        let dateString      : String
+        let dateCategory: Theme.DateCategory
+        let dateString  : String
     }
 
     struct Colleague {
@@ -25,13 +25,15 @@ extension ColleagueProfile {
 }
 
 extension ColleagueProfile {
-    enum Fetch {
-        struct Request {}
+    enum Fetch {}
+}
 
-        typealias Response = Result<User, ColleaguesUseCaseError>
+extension ColleagueProfile.Fetch {
+    struct Request {}
 
-        struct ViewModel {
-            let colleague: Colleague
-        }
+    typealias Response = Result<User, ColleaguesUseCaseError>
+
+    struct ViewModel {
+        let colleague: ColleagueProfile.Colleague
     }
 }

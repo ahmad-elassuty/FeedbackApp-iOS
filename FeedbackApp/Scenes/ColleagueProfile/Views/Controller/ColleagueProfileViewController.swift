@@ -10,7 +10,7 @@ import UIKit
 
 class ColleagueProfileViewController: BaseViewController {
     @IBOutlet weak var colleagueProfileTableView: UITableView!
-    weak var colleagueProfileHeaderView: ColleagueProfileTableHeader!
+    weak var colleagueProfileHeaderView         : ColleagueProfileTableHeader!
 
     var interactor  : ColleagueProfileBusinessLogic!
     var router      : ColleagueProfileRoutingLogic!

@@ -19,23 +19,29 @@ struct ColleaguesList {
 }
 
 extension ColleaguesList {
-    enum GiveFeedback {
-        typealias Request   = GiveColleagueFeedbackRequest
-        typealias Response  = Result<User, ColleaguesUseCaseError>
+    enum GiveFeedback {}
+}
 
-        struct ViewModel {
-            let colleague: Colleague
-        }
+extension ColleaguesList.GiveFeedback {
+    typealias Request   = GiveColleagueFeedbackRequest
+
+    typealias Response  = Result<User, ColleaguesUseCaseError>
+
+    struct ViewModel {
+        let colleague: ColleaguesList.Colleague
     }
 }
 
 extension ColleaguesList {
-    enum Fetch {
-        typealias Request   = FetchColleaguesRequest
-        typealias Response  = Result<[User], ColleaguesUseCaseError>
+    enum Fetch {}
+}
 
-        struct ViewModel {
-            let colleagues: [[Colleague]]
-        }
+extension ColleaguesList.Fetch {
+    typealias Request   = FetchColleaguesRequest
+
+    typealias Response  = Result<[User], ColleaguesUseCaseError>
+
+    struct ViewModel {
+        let colleagues: [[ColleaguesList.Colleague]]
     }
 }

@@ -160,7 +160,7 @@ extension ColleaguesListViewController: ColleaguesListDisplayView {
 }
 
 // MARK: Data Source Extension
-fileprivate enum Section: Int {
+private enum Section: Int {
     case giveFeedback,
     recentlyInteractedWith
 

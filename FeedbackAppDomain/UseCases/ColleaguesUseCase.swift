@@ -11,9 +11,9 @@
     capabilities/use cases regarding colleagues
  */
 public protocol ColleaguesUseCase {
-    associatedtype FetchColleaguesErrorType         : Error
-    associatedtype GiveColleagueFeedbackErrorType   : Error
-    associatedtype FetchColleagueProfileErrorType   : Error
+    associatedtype FetchColleaguesErrorType      : Error
+    associatedtype GiveColleagueFeedbackErrorType: Error
+    associatedtype FetchColleagueProfileErrorType: Error
 
     /**
      Fetch all colleagues
@@ -27,7 +27,6 @@ public protocol ColleaguesUseCase {
     func fetchColleagues(
         completion: (Result<[User], FetchColleaguesErrorType>) -> Void
     )
-
 
     /**
      Give a specific colleague your feedback
@@ -43,7 +42,6 @@ public protocol ColleaguesUseCase {
         id: User.IdentifierType,
         completion: (Result<User, GiveColleagueFeedbackErrorType>) -> Void
     )
-
 
     /**
      Fetch specific colleague profile data

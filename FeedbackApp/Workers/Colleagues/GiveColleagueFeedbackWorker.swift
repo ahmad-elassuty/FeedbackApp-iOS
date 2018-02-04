@@ -17,10 +17,10 @@ public final class GiveColleagueFeedbackWorker {
     private let fileStore: FeedbackAppFileStore.ColleaguesUseCase = ColleaguesUseCase()
 
     typealias ResultType = Result<User, ColleaguesUseCaseError>
-    func giveColleagueFeedback(request: GiveColleagueFeedbackRequest,
+    func giveColleagueFeedback(
+        request: GiveColleagueFeedbackRequest,
         completion: (ResultType) -> Void) {
-        fileStore.giveColleagueFeedback(id: request.userId)
-        { storeResult in
+        fileStore.giveColleagueFeedback(id: request.userId) { storeResult in
             guard storeResult.isSuccess else {
                 let error = ColleaguesUseCaseError(fileStoreError: storeResult.error!)
                 let result = ResultType(error: error)

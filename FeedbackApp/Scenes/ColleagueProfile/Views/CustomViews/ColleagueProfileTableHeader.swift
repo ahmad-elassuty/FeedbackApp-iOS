@@ -9,9 +9,9 @@
 import UIKit
 
 class ColleagueProfileTableHeader: UIView, Nibable {
-    @IBOutlet weak var contentView              : UIView!
-    @IBOutlet weak var colleagueAvatarImageView : UIImageView!
-    @IBOutlet weak var colleagueNameLabel       : UILabel!
+    @IBOutlet weak var contentView             : UIView!
+    @IBOutlet weak var colleagueAvatarImageView: UIImageView!
+    @IBOutlet weak var colleagueNameLabel      : UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

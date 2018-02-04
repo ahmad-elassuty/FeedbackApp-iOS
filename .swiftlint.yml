@@ -1,0 +1,15 @@
+disabled_rules:
+  - colon
+
+identifier_name:
+  excluded:
+    - id
+
+excluded:
+  - Pods
+  - FeedbackAppUITests
+  - FeedbackAppTests
+  - FeedbackAppDomainTests
+  - FeedbackAppFileStoreTests
+
+force_cast: warning

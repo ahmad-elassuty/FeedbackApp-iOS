@@ -17,10 +17,10 @@ public final class FetchColleagueProfileWorker {
     private let fileStore: FeedbackAppFileStore.ColleaguesUseCase = ColleaguesUseCase()
 
     typealias ResultType = Result<User, ColleaguesUseCaseError>
-    func fetchColleagueProfile(request: FetchColleagueProfileRequest,
+    func fetchColleagueProfile(
+        request: FetchColleagueProfileRequest,
         completion: (ResultType) -> Void) {
-        fileStore.fetchColleagueProfile(id: request.userId)
-        { storeResult in
+        fileStore.fetchColleagueProfile(id: request.userId) { storeResult in
             guard storeResult.isSuccess else {
                 let error = ColleaguesUseCaseError(fileStoreError: storeResult.error!)
                 let result = ResultType(error: error)

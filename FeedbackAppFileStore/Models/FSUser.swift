@@ -10,11 +10,11 @@ import Marshal
 import FeedbackAppDomain
 
 struct FSUser: Unmarshaling {
-    let id              : Int
-    let name            : String
-    let email           : String
-    let avatarURLString : String?
-    let feedbacks       : [FSFeedback]
+    let id             : Int
+    let name           : String
+    let email          : String
+    let avatarURLString: String?
+    let feedbacks      : [FSFeedback]
 
     init(object: MarshaledObject) throws {
         id              = try object.value(for: "id")

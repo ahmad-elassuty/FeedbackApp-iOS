@@ -17,7 +17,7 @@ final class ColleaguesListTableViewCell: UITableViewCell {
     @IBOutlet weak var lastFeedbackDateLabel: UILabel!
 
     var colleague: ColleaguesList.Colleague?
-    var giveColleagueFeedbackTapped: ((User.IdentifierType) -> ())?
+    var giveColleagueFeedbackTapped: ((User.IdentifierType) -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()

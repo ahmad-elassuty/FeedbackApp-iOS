@@ -19,9 +19,8 @@ let yearAgoInterval    = 12 * monthAgoInterval
  */
 enum Theme {}
 
-
 // MARK: - Navigation controller theme properties
-extension Theme { 
+extension Theme {
     static var navigationBarTintColor: UIColor {
         return #colorLiteral(red: 0.1411764706, green: 0.3254901961, blue: 0.5294117647, alpha: 1)
     }
@@ -34,7 +33,7 @@ extension Theme {
         let navigationBar = navigationController.navigationBar
         navigationBar.tintColor = navigationBarTintColor
 
-        let titleAttributes: [NSAttributedStringKey : Any] = [
+        let titleAttributes: [NSAttributedStringKey: Any] = [
             .foregroundColor: navigationBarTitleTextColor
         ]
 

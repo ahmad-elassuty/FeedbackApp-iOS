@@ -15,9 +15,9 @@ extension UITableView {
     }
 
     func register(_ klass: AnyClass, identifier: String? = nil) {
-        let nibName = String(describing: klass.self)
-        let identifier = identifier ?? nibName
-        let nib = UINib(nibName: nibName, bundle: nil)
+        let nibName     = String(describing: klass.self)
+        let identifier  = identifier ?? nibName
+        let nib         = UINib(nibName: nibName, bundle: nil)
         register(nib, forCellReuseIdentifier: identifier)
     }
 }

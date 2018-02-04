@@ -10,11 +10,11 @@
  User data model is used to represent system User object.
  */
 public struct User: Identifiable, Equatable {
-    public let id                       : Int
-    public let name                     : String
-    public let email                    : String
-    public let avatarURLString          : String?
-    public private(set) var feedbacks   : [Feedback]
+    public let id                    : Int
+    public let name                  : String
+    public let email                 : String
+    public let avatarURLString       : String?
+    public private(set) var feedbacks: [Feedback]
 
     public init(id: Int, name: String, email: String,
                 avatarURLString: String?, feedbacks: [Feedback]) {

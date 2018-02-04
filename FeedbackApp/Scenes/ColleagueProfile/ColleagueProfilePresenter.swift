@@ -30,7 +30,7 @@ extension ColleagueProfilePresenter {
 
 private extension ColleagueProfilePresenter {
     typealias ViewModel = ColleagueProfile.Fetch.ViewModel
-    
+
     func transformDomainUser(_ user: User) -> ViewModel {
         let avatarURL = URL(string: user.avatarURLString ?? "")
         let colleague = ColleagueProfile.Colleague(

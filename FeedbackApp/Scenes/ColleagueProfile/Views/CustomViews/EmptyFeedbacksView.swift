@@ -9,8 +9,8 @@
 import UIKit
 
 class EmptyFeedbacksView: UIView, Nibable {
-    @IBOutlet weak var contentView  : UIView!
-    @IBOutlet weak var titleLabel   : UILabel!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var titleLabel : UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,7 +23,7 @@ class EmptyFeedbacksView: UIView, Nibable {
     }
 
     func setData(colleague: ColleagueProfile.Colleague) {
-        titleLabel.text = "Leave \(colleague.name) your feedback"
+        titleLabel.text = "You haven't interacted with \(colleague.name) yet."
     }
 }
 

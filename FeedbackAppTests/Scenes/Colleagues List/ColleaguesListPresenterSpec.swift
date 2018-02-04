@@ -45,14 +45,13 @@ class ColleaguesListPresenterSpec: QuickSpec {
                         expect(viewMock.didFetchViewModel?.colleagues).toEventually(haveCount(2))
 
                         let colleagues = viewMock.didFetchViewModel?.colleagues
+                        let recentlyInteractedWithSection       = colleagues!.last!
+                        let didNotInteractWithRecentlySection   = colleagues!.first!
 
-                        let recentlyInteractedWithSection   = colleagues!.last!
-                        let didNotInteractWithSection       = colleagues!.first!
-
-                        expect(didNotInteractWithSection).to(haveCount(1))
+                        expect(didNotInteractWithRecentlySection).to(haveCount(1))
                         expect(recentlyInteractedWithSection).to(haveCount(1))
 
-                        XCTAssert(didNotInteractWithSection.first! == userWith5MonthsAgoFeedback)
+                        XCTAssert(didNotInteractWithRecentlySection.first! == userWith5MonthsAgoFeedback)
                         XCTAssert(recentlyInteractedWithSection.first! == userWithRecentFeedback)
                     }
                 }

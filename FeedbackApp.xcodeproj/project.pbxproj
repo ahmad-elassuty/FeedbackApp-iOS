@@ -57,6 +57,7 @@
 		208BEDAE2026228F00833560 /* ColleagueProfilePresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BEDAD2026228F00833560 /* ColleagueProfilePresenterSpec.swift */; };
 		2094B3A720274A45005F0FB8 /* Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094B3A620274A45005F0FB8 /* Equatable.swift */; };
 		2094B3A920274A88005F0FB8 /* ColleaguesListMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094B3A820274A88005F0FB8 /* ColleaguesListMocks.swift */; };
+		2094B3AB2027676E005F0FB8 /* ColleaguesListInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094B3AA2027676E005F0FB8 /* ColleaguesListInteractorSpec.swift */; };
 		20C861802021D6D800AD6391 /* FetchColleaguesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C8617F2021D6D800AD6391 /* FetchColleaguesWorker.swift */; };
 		20C861822021D6E600AD6391 /* GiveColleagueFeedbackWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861812021D6E600AD6391 /* GiveColleagueFeedbackWorker.swift */; };
 		20C861842021D6F200AD6391 /* FetchColleagueProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861832021D6F200AD6391 /* FetchColleagueProfileWorker.swift */; };
@@ -242,6 +243,7 @@
 		208BEDAD2026228F00833560 /* ColleagueProfilePresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfilePresenterSpec.swift; sourceTree = "<group>"; };
 		2094B3A620274A45005F0FB8 /* Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatable.swift; sourceTree = "<group>"; };
 		2094B3A820274A88005F0FB8 /* ColleaguesListMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListMocks.swift; sourceTree = "<group>"; };
+		2094B3AA2027676E005F0FB8 /* ColleaguesListInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleaguesListInteractorSpec.swift; sourceTree = "<group>"; };
 		20C8617F2021D6D800AD6391 /* FetchColleaguesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchColleaguesWorker.swift; sourceTree = "<group>"; };
 		20C861812021D6E600AD6391 /* GiveColleagueFeedbackWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveColleagueFeedbackWorker.swift; sourceTree = "<group>"; };
 		20C861832021D6F200AD6391 /* FetchColleagueProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchColleagueProfileWorker.swift; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 			isa = PBXGroup;
 			children = (
 				208BEDA92026224600833560 /* ColleaguesListPresenterSpec.swift */,
+				2094B3AA2027676E005F0FB8 /* ColleaguesListInteractorSpec.swift */,
 			);
 			path = "Colleagues List";
 			sourceTree = "<group>";
@@ -1508,6 +1511,7 @@
 				2094B3A720274A45005F0FB8 /* Equatable.swift in Sources */,
 				20E30C5A202638E9007D11F7 /* ColleagueProfileMocks.swift in Sources */,
 				2094B3A920274A88005F0FB8 /* ColleaguesListMocks.swift in Sources */,
+				2094B3AB2027676E005F0FB8 /* ColleaguesListInteractorSpec.swift in Sources */,
 				20E30C602026523B007D11F7 /* Date+TimeAgoSpec.swift in Sources */,
 				208BEDA120261CEB00833560 /* FetchColleagueProfileWorkerSpec.swift in Sources */,
 				20E30C622026524E007D11F7 /* ThemeDateCategorySpec.swift in Sources */,

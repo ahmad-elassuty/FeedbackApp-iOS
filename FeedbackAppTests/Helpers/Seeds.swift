@@ -26,8 +26,9 @@ let colleagueProfileFeedback2 = ColleagueProfile.Feedback(
     dateString: oldDate.timeAgoString
 )
 
+let userWith5MonthsAgoFeedbackId = 1
 let userWith5MonthsAgoFeedback = User(
-    id: 1, name: name, email: email + "1",
+    id: userWith5MonthsAgoFeedbackId, name: name, email: email + "1",
     avatarURLString: avatar, feedbacks: feedbacks
 )
 

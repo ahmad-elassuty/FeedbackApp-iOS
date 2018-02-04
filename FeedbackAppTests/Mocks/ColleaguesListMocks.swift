@@ -45,21 +45,21 @@ class ColleaguesListDisplayViewMock: ColleaguesListDisplayView {
 
 class ColleaguesListPresenterMock: ColleaguesListPresentationLogic {
     var presentFetchedColleaguesCalled = false
-    var presentFetchedColleaguesCalledResponse: ColleaguesList.Fetch.Response?
+    var colleaguesResponse: ColleaguesList.Fetch.Response?
 
     var presentGiveFeedbackCalled = false
-    var presentGiveFeedbackCalledResponse: ColleaguesList.GiveFeedback.Response?
+    var giveFeedbackResponse: ColleaguesList.GiveFeedback.Response?
 
     required init(displayView: ColleaguesListDisplayView) {}
 
     func presentFetchedColleagues(_ response: ColleaguesList.Fetch.Response) {
         presentFetchedColleaguesCalled = true
-        presentFetchedColleaguesCalledResponse = response
+        colleaguesResponse = response
     }
 
     func presentGiveFeedback(_ response: ColleaguesList.GiveFeedback.Response) {
         presentGiveFeedbackCalled = true
-        presentGiveFeedbackCalledResponse = response
+        giveFeedbackResponse = response
     }
 }
 

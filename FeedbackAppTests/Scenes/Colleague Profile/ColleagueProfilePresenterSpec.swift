@@ -17,7 +17,7 @@ class ColleaguesProfilePresenterSpec: QuickSpec {
         var presenter: ColleagueProfilePresenter!
 
         let error = ColleaguesUseCaseError.fetchColleagueProfileError("Error")
-        let successResponse  = ColleagueProfile.Fetch.Response(value: user)
+        let successResponse  = ColleagueProfile.Fetch.Response(value: userWith5MonthsAgoFeedback)
         let failureResponse  = ColleagueProfile.Fetch.Response(error: error)
 
         describe("Colleague Profile Presenter") {

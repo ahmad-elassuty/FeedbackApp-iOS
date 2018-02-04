@@ -10,7 +10,6 @@ import Foundation
 import FeedbackAppDomain
 @testable import FeedbackApp
 
-fileprivate let id                      = 1
 fileprivate let name                    = "Test User"
 fileprivate let email                   = "test@test.com"
 fileprivate let avatar: String?         = nil
@@ -18,14 +17,27 @@ fileprivate let oldDate                 = Date(timeInterval: -5 * 30 * 24 * 60 *
 fileprivate let feedback                = Feedback(id: 1, date: oldDate)
 fileprivate let feedbacks: [Feedback]   = [feedback]
 
-let colleagueProfileFeedback2 = ColleagueProfile.Feedback(dateCategory: Theme.DateCategory.lessThanYear, dateString: oldDate.timeAgoString)
-let user = User(
-    id: id, name: name, email: email,
+fileprivate let newDate                         = Date()
+fileprivate let recentFeedback                  = Feedback(id: 2, date: newDate)
+fileprivate let recentFeedbacks: [Feedback]     = [recentFeedback]
+
+let colleagueProfileFeedback2 = ColleagueProfile.Feedback(
+    dateCategory: Theme.DateCategory.lessThanYear,
+    dateString: oldDate.timeAgoString
+)
+
+let userWith5MonthsAgoFeedback = User(
+    id: 1, name: name, email: email + "1",
     avatarURLString: avatar, feedbacks: feedbacks
 )
 
+let userWithRecentFeedback = User(
+    id: 2, name: name, email: email + "2",
+    avatarURLString: avatar, feedbacks: recentFeedbacks
+)
+
 let colleagueProfile = ColleagueProfile.Colleague(
-    id: id, name: name, avatarURL: URL(string: avatar ?? ""),
+    id: 1, name: name, avatarURL: URL(string: avatar ?? ""),
     feedbacks: [colleagueProfileFeedback2]
 )
 

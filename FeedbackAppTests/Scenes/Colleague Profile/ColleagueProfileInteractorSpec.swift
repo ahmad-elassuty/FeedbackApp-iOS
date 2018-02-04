@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import FeedbackAppDomain
 @testable import FeedbackApp
 
 class ColleaguesProfileInteractorSpec: QuickSpec {
@@ -22,13 +23,15 @@ class ColleaguesProfileInteractorSpec: QuickSpec {
                 beforeEach {
                     presenterMock       = ColleagueProfilePresenterMock()
                     interactor          = ColleagueProfileInteractor(presenter: presenterMock)
-                    interactor.user     = user
+                    interactor.user     = userWith5MonthsAgoFeedback
                     interactor.fetchColleagueProfile(request)
                 }
 
                 it("should eventually call present fetched colleagues") {
                     expect(presenterMock.presentFetchedColleagueCalled).toEventually(beTrue())
-                    expect(presenterMock.response?.value).toEventually(equal(user))
+
+                    let resultUser = presenterMock.response!.value!
+                    XCTAssert(resultUser == userWith5MonthsAgoFeedback)
                 }
             }
         }

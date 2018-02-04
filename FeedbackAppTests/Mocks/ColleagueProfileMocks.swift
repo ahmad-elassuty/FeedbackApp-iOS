@@ -6,27 +6,8 @@
 //  Copyright © 2018 Challenges. All rights reserved.
 //
 
+import FeedbackAppDomain
 @testable import FeedbackApp
-
-extension ColleagueProfile.Feedback: Equatable {
-    public static func ==(lhs: ColleagueProfile.Feedback, rhs: ColleagueProfile.Feedback) -> Bool {
-        return lhs.dateCategory == rhs.dateCategory &&
-            lhs.dateString == rhs.dateString
-    }
-}
-
-extension ColleagueProfile.Colleague: Equatable {
-    public static func ==(lhs: ColleagueProfile.Colleague, rhs: ColleagueProfile.Colleague) -> Bool {
-        let equalFeedbacksSizes = lhs.feedbacks.count == rhs.feedbacks.count
-        let equalFeedbacks = zip(lhs.feedbacks, rhs.feedbacks).reduce(true) { $0 && $1.0 == $1.1 }
-
-        return lhs.id == rhs.id &&
-            lhs.name == rhs.name &&
-            equalFeedbacksSizes &&
-            equalFeedbacks &&
-            lhs.avatarURL == rhs.avatarURL
-    }
-}
 
 class ColleagueProfileDisplayViewMock: ColleagueProfileDisplayView {
     var didFetchCalled      = false

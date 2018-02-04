@@ -17,6 +17,7 @@ extension ColleagueProfile {
     }
 
     struct Colleague {
+        let id       : Int
         let name     : String
         let avatarURL: URL?
         let feedbacks: [Feedback]

@@ -22,8 +22,12 @@ extension Date {
         }
 
         let components = Calendar.current.dateComponents(
-            [.month, .day, .hour, .minute], from: self, to: Date()
+            [.year, .month, .day, .hour, .minute], from: self, to: Date()
         )
+
+        if let year = components.year, year > 0 {
+            return _formatResultString(forValue: year, component: "year")
+        }
 
         if let month = components.month, month > 0 {
             return _formatResultString(forValue: month, component: "month")

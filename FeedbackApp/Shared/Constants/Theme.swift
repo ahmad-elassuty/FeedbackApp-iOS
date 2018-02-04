@@ -8,6 +8,12 @@
 
 import UIKit
 
+let minuteAgoInterval  = TimeInterval(-1 * 60)
+let hourAgoInterval    = 60 * minuteAgoInterval
+let dayAgoInterval     = 24 * hourAgoInterval
+let monthAgoInterval   = 30 * dayAgoInterval
+let yearAgoInterval    = 12 * monthAgoInterval
+
 /**
  Global application theme configurations
  */
@@ -67,9 +73,8 @@ extension Theme {
             }
 
             let now = Date()
-            let monthAgoInterval: TimeInterval = -30 * 24 * 60 * 60
             let monthAgo = now.addingTimeInterval(monthAgoInterval)
-            let yearAgo = now.addingTimeInterval(12 * monthAgoInterval)
+            let yearAgo = now.addingTimeInterval(yearAgoInterval)
 
             switch date {
             case _ where date > monthAgo:

@@ -85,6 +85,10 @@
 		20C861C92022115F00AD6391 /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861C82022115F00AD6391 /* Date+TimeAgo.swift */; };
 		20C861CB2022120400AD6391 /* UITableView+GenericDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861CA2022120400AD6391 /* UITableView+GenericDequeue.swift */; };
 		20C861CF2022261B00AD6391 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C861CE2022261B00AD6391 /* UIView+Rounded.swift */; };
+		20E30C5A202638E9007D11F7 /* ColleagueProfileMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E30C59202638E9007D11F7 /* ColleagueProfileMocks.swift */; };
+		20E30C5D20264CF8007D11F7 /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E30C5C20264CF8007D11F7 /* Seeds.swift */; };
+		20E30C602026523B007D11F7 /* Date+TimeAgoSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E30C5F2026523B007D11F7 /* Date+TimeAgoSpec.swift */; };
+		20E30C622026524E007D11F7 /* ThemeDateCategorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E30C612026524E007D11F7 /* ThemeDateCategorySpec.swift */; };
 		2CFE9902440559DDA328B441 /* Pods_FeedbackAppFileStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC89569D34D705D9A6358584 /* Pods_FeedbackAppFileStore.framework */; };
 		40888C1D7128899A3A6E7AF3 /* Pods_FeedbackAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0725B62A613EE0E010A250 /* Pods_FeedbackAppUITests.framework */; };
 		8DA33C5FEF1DE353FDCF474B /* Pods_FeedbackAppFileStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF80054D7B06872F8122B28 /* Pods_FeedbackAppFileStoreTests.framework */; };
@@ -265,6 +269,10 @@
 		20C861C82022115F00AD6391 /* Date+TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
 		20C861CA2022120400AD6391 /* UITableView+GenericDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+GenericDequeue.swift"; sourceTree = "<group>"; };
 		20C861CE2022261B00AD6391 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
+		20E30C59202638E9007D11F7 /* ColleagueProfileMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColleagueProfileMocks.swift; sourceTree = "<group>"; };
+		20E30C5C20264CF8007D11F7 /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
+		20E30C5F2026523B007D11F7 /* Date+TimeAgoSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgoSpec.swift"; sourceTree = "<group>"; };
+		20E30C612026524E007D11F7 /* ThemeDateCategorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDateCategorySpec.swift; sourceTree = "<group>"; };
 		2AB0B6348D44B5556CE7EC2E /* Pods-FeedbackAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppTests/Pods-FeedbackAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		39F22454CBC9F1A0D8122ADE /* Pods-FeedbackAppFileStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppFileStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppFileStoreTests/Pods-FeedbackAppFileStoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		51462D4B181098787E6E8878 /* Pods-FeedbackAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedbackAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedbackAppUITests/Pods-FeedbackAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -577,6 +585,9 @@
 		20893FFF202509FC0002461F /* FeedbackAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				20E30C5E2026522D007D11F7 /* Utils */,
+				20E30C5B20264CEA007D11F7 /* Helpers */,
+				20E30C58202638D2007D11F7 /* Mocks */,
 				208BEDA42026211200833560 /* Scenes */,
 				208BED9C20261B5000833560 /* Workers */,
 				20894002202509FC0002461F /* Info.plist */,
@@ -767,6 +778,31 @@
 				2033C6222023A2F90034B82B /* controller */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		20E30C58202638D2007D11F7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				20E30C59202638E9007D11F7 /* ColleagueProfileMocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		20E30C5B20264CEA007D11F7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				20E30C5C20264CF8007D11F7 /* Seeds.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		20E30C5E2026522D007D11F7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				20E30C5F2026523B007D11F7 /* Date+TimeAgoSpec.swift */,
+				20E30C612026524E007D11F7 /* ThemeDateCategorySpec.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		78E044F6A4A5DC6E243F4522 /* Pods */ = {
@@ -1463,10 +1499,14 @@
 			files = (
 				208BEDA320261D6C00833560 /* GiveColleagueFeedbackWorkerSpec.swift in Sources */,
 				208BEDA82026221D00833560 /* ColleaguesListInteractorSpec.swift in Sources */,
+				20E30C5D20264CF8007D11F7 /* Seeds.swift in Sources */,
 				208BED9F20261C2B00833560 /* FetchColleaguesListWorkerSpec.swift in Sources */,
 				208BEDAC2026228100833560 /* ColleagueProfileInteractorSpec.swift in Sources */,
 				208BEDAA2026224600833560 /* ColleaguesListPresenterSpec.swift in Sources */,
+				20E30C5A202638E9007D11F7 /* ColleagueProfileMocks.swift in Sources */,
+				20E30C602026523B007D11F7 /* Date+TimeAgoSpec.swift in Sources */,
 				208BEDA120261CEB00833560 /* FetchColleagueProfileWorkerSpec.swift in Sources */,
+				20E30C622026524E007D11F7 /* ThemeDateCategorySpec.swift in Sources */,
 				208BEDAE2026228F00833560 /* ColleagueProfilePresenterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

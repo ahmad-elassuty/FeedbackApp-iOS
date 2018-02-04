@@ -34,6 +34,7 @@ private extension ColleagueProfilePresenter {
     func transformDomainUser(_ user: User) -> ViewModel {
         let avatarURL = URL(string: user.avatarURLString ?? "")
         let colleague = ColleagueProfile.Colleague(
+            id: user.id,
             name: user.name.capitalized,
             avatarURL: avatarURL,
             feedbacks: user.feedbacks.map(transformDomainFeedback)

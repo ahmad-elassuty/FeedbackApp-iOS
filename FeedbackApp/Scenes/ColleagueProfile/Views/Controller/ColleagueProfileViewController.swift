@@ -97,10 +97,28 @@ private extension ColleagueProfileViewController {
     }
 
     func reloadData() {
-        let name = colleague!.name
-        let avatarURL = colleague!.avatarURL
+        guard let colleague = colleague else {
+            return
+        }
 
-        colleagueProfileHeaderView.setColleague(name: name, imageURL: avatarURL)
+        // Update header View
+        colleagueProfileHeaderView.setColleague(
+            name: colleague.name,
+            imageURL: colleague.avatarURL
+        )
+
         colleagueProfileTableView.reloadData()
+        updateEmptyState(colleague: colleague)
+    }
+
+    func updateEmptyState(colleague: ColleagueProfile.Colleague) {
+        guard colleague.feedbacks.isEmpty else {
+            colleagueProfileTableView.backgroundView = nil
+            return
+        }
+
+        let emptyView = EmptyFeedbacksView()
+        emptyView.setData(colleague: colleague)
+        colleagueProfileTableView.backgroundView = emptyView
     }
 }

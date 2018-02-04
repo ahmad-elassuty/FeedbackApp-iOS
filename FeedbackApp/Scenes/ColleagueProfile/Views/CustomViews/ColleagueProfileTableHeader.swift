@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColleagueProfileTableHeader: UIView {
+class ColleagueProfileTableHeader: UIView, Nibable {
     @IBOutlet weak var contentView              : UIView!
     @IBOutlet weak var colleagueAvatarImageView : UIImageView!
     @IBOutlet weak var colleagueNameLabel       : UILabel!
@@ -34,12 +34,8 @@ class ColleagueProfileTableHeader: UIView {
 }
 
 private extension ColleagueProfileTableHeader {
-    var nibName: String {
-        return String(describing: type(of: self))
-    }
-
     func initializeView() {
-        Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
+        Bundle.main.loadNibNamed(defaultNibName, owner: self, options: nil)
         addSubview(contentView)
 
         // Setup constraints

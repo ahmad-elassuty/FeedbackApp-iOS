@@ -48,6 +48,9 @@
 		2072F72920211CB300FA3B1A /* FSFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2072F72820211CB300FA3B1A /* FSFeedback.swift */; };
 		2072F72C20211CFA00FA3B1A /* Date+JSONTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2072F72B20211CFA00FA3B1A /* Date+JSONTransformer.swift */; };
 		2072F72F20211FE900FA3B1A /* FeedbackAppDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 204DCF022020A5FF0065B7DF /* FeedbackAppDomain.framework */; };
+		2086E12E2027826400181235 /* EmptyFeedbacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086E12D2027826400181235 /* EmptyFeedbacksView.swift */; };
+		2086E1302027826D00181235 /* EmptyFeedbacksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2086E12F2027826D00181235 /* EmptyFeedbacksView.xib */; };
+		2086E13420278CD600181235 /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2086E13320278CD600181235 /* Nibable.swift */; };
 		20893FF3202509E60002461F /* FeedbackAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20893FF2202509E60002461F /* FeedbackAppUITests.swift */; };
 		208BED9F20261C2B00833560 /* FetchColleaguesListWorkerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BED9E20261C2B00833560 /* FetchColleaguesListWorkerSpec.swift */; };
 		208BEDA120261CEB00833560 /* FetchColleagueProfileWorkerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BEDA020261CEB00833560 /* FetchColleagueProfileWorkerSpec.swift */; };
@@ -230,6 +233,9 @@
 		2072F7262021188C00FA3B1A /* FSUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSUser.swift; sourceTree = "<group>"; };
 		2072F72820211CB300FA3B1A /* FSFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSFeedback.swift; sourceTree = "<group>"; };
 		2072F72B20211CFA00FA3B1A /* Date+JSONTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+JSONTransformer.swift"; sourceTree = "<group>"; };
+		2086E12D2027826400181235 /* EmptyFeedbacksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFeedbacksView.swift; sourceTree = "<group>"; };
+		2086E12F2027826D00181235 /* EmptyFeedbacksView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyFeedbacksView.xib; sourceTree = "<group>"; };
+		2086E13320278CD600181235 /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
 		20893FF0202509E60002461F /* FeedbackAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedbackAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20893FF2202509E60002461F /* FeedbackAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAppUITests.swift; sourceTree = "<group>"; };
 		20893FF4202509E60002461F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -378,31 +384,33 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		2033C6222023A2F90034B82B /* controller */ = {
+		2033C6222023A2F90034B82B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				20C861BB202200EE00AD6391 /* ColleagueProfileViewController.swift */,
 				20C861BC202200EE00AD6391 /* ColleagueProfileViewController.xib */,
 			);
-			path = controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		2033C6232023A30D0034B82B /* cells */ = {
+		2033C6232023A30D0034B82B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				2033C62B20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.swift */,
 				2033C62C20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.xib */,
 			);
-			path = cells;
+			path = Cells;
 			sourceTree = "<group>";
 		};
-		2033C6242023AAB30034B82B /* custom views */ = {
+		2033C6242023AAB30034B82B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				2033C6272023AAF20034B82B /* ColleagueProfileTableHeader.swift */,
 				2033C6252023AAD80034B82B /* ColleagueProfileTableHeader.xib */,
+				2086E12D2027826400181235 /* EmptyFeedbacksView.swift */,
+				2086E12F2027826D00181235 /* EmptyFeedbacksView.xib */,
 			);
-			path = "custom views";
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		204DCEDE2020A38C0065B7DF = {
@@ -657,13 +665,13 @@
 		20C8617C2021CE9E00AD6391 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				20C8617E2021D63500AD6391 /* Colleague Profile */,
-				20C8617D2021D63000AD6391 /* Colleagues List */,
+				20C8617E2021D63500AD6391 /* ColleagueProfile */,
+				20C8617D2021D63000AD6391 /* ColleaguesList */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		20C8617D2021D63000AD6391 /* Colleagues List */ = {
+		20C8617D2021D63000AD6391 /* ColleaguesList */ = {
 			isa = PBXGroup;
 			children = (
 				20C861932021FB4900AD6391 /* Views */,
@@ -674,10 +682,10 @@
 				20C8619C2021FBBE00AD6391 /* ColleaguesListModel.swift */,
 				20C8619E2021FC1A00AD6391 /* ColleaguesListProtocols.swift */,
 			);
-			path = "Colleagues List";
+			path = ColleaguesList;
 			sourceTree = "<group>";
 		};
-		20C8617E2021D63500AD6391 /* Colleague Profile */ = {
+		20C8617E2021D63500AD6391 /* ColleagueProfile */ = {
 			isa = PBXGroup;
 			children = (
 				20C861AE2022008B00AD6391 /* Views */,
@@ -688,7 +696,7 @@
 				20C861B7202200D200AD6391 /* ColleagueProfileModel.swift */,
 				20C861B9202200DC00AD6391 /* ColleagueProfileProtocols.swift */,
 			);
-			path = "Colleague Profile";
+			path = ColleagueProfile;
 			sourceTree = "<group>";
 		};
 		20C861852021D85800AD6391 /* Errors */ = {
@@ -735,6 +743,7 @@
 			isa = PBXGroup;
 			children = (
 				20C861C2202210D500AD6391 /* SceneConfigurator.swift */,
+				2086E13320278CD600181235 /* Nibable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -777,9 +786,9 @@
 		20C861AE2022008B00AD6391 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2033C6242023AAB30034B82B /* custom views */,
-				2033C6232023A30D0034B82B /* cells */,
-				2033C6222023A2F90034B82B /* controller */,
+				2033C6242023AAB30034B82B /* CustomViews */,
+				2033C6232023A30D0034B82B /* Cells */,
+				2033C6222023A2F90034B82B /* Controller */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1092,6 +1101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2033C62E20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.xib in Resources */,
+				2086E1302027826D00181235 /* EmptyFeedbacksView.xib in Resources */,
 				20C861BE202200EE00AD6391 /* ColleagueProfileViewController.xib in Resources */,
 				20C861A92022003D00AD6391 /* ColleaguesListViewController.xib in Resources */,
 				204DCEF52020A38C0065B7DF /* LaunchScreen.storyboard in Resources */,
@@ -1416,6 +1426,7 @@
 				20C861BA202200DC00AD6391 /* ColleagueProfileProtocols.swift in Sources */,
 				20C8619F2021FC1A00AD6391 /* ColleaguesListProtocols.swift in Sources */,
 				20C8619D2021FBBE00AD6391 /* ColleaguesListModel.swift in Sources */,
+				2086E13420278CD600181235 /* Nibable.swift in Sources */,
 				20C861B4202200BC00AD6391 /* ColleagueProfileSceneConfigurator.swift in Sources */,
 				20C861B0202200A800AD6391 /* ColleagueProfileInteractor.swift in Sources */,
 				2033C62D20248D5B0034B82B /* ColleagueProfileFeedbackTableViewCell.swift in Sources */,
@@ -1433,6 +1444,7 @@
 				20C861992021FB8100AD6391 /* ColleaguesListSceneConfigurator.swift in Sources */,
 				204DCEEB2020A38C0065B7DF /* AppDelegate.swift in Sources */,
 				20C861B6202200C900AD6391 /* ColleagueProfileRouter.swift in Sources */,
+				2086E12E2027826400181235 /* EmptyFeedbacksView.swift in Sources */,
 				20C861A32021FCD800AD6391 /* BaseViewController.swift in Sources */,
 				20C8619B2021FB9100AD6391 /* ColleaguesListRouter.swift in Sources */,
 				20C861882021D86A00AD6391 /* ColleaguesUseCaseErrors.swift in Sources */,

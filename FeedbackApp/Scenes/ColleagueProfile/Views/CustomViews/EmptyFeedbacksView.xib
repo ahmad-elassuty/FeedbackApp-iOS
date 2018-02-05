@@ -31,7 +31,7 @@
                     <rect key="frame" x="162.5" y="148.5" width="69" height="69"/>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ATj-37-Um7" firstAttribute="centerX" secondItem="wY3-pD-v6B" secondAttribute="centerX" id="5lt-5F-WCS"/>
                 <constraint firstItem="wY3-pD-v6B" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="PDF-Vu-CKk"/>
